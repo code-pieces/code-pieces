@@ -6,10 +6,10 @@
 ## User Stories
 
 ### Required:
-API
+#### API
 * [ ] Authentication with rails api.
 * [ ] Download all shared snippets. 
-Developer
+#### Developer
 * Sublime text: plugin (Python)
   * [ ] Download snippet in sublime text 3
   * [ ] Only public and shared snippet can be searched
