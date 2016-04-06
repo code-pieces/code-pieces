@@ -6,20 +6,22 @@
 ## User Stories
 
 ### Required:
-#### API
-* [ ] Authentication with rails api.
-* [ ] Download all shared snippets. 
-#### Developer
-* Sublime text: plugin (Python)
-  * [ ] Download snippet in sublime text 3
-  * [ ] Only public and shared snippet can be searched
-  * [ ] Search snippet
-* Website
-  * [ ] Login using social network accounts: github, facebook, google
-  * [ ] Snippet management: create, search, edit, delete
+* API:
+  * [ ] Authentication with rails api.
+  * [ ] Download all shared snippets. 
+
+* Developer:
+  * Sublime text: plugin (Python)
+    * [ ] Download snippet in sublime text 3
+    * [ ] Only public and shared snippet can be searched
+    * [ ] Search snippet
+  * Website
+    * [ ] Login using social network accounts: github, facebook, google
+    * [ ] Snippet management: create, search, edit, delete
+
 * Company
-  * [ ] Manage snippets: create, delete, publish, private
-  * [ ] Developers management
+    * [ ] Manage snippets: create, delete, publish, private
+    * [ ] Developers management
   
 ### Optional:
 * [ ] Snippet can have many versions, developers can update snippet and the owner must accept it before the new version can be published.
@@ -46,8 +48,9 @@ Technologies:
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-I have not enough time to finish all of the optional part of the Assignment and there are many new things to learn.
+Describe any challenges encountered while building the app:
+
+
 ## License
 
     Copyright [2016] [xxxxxxxxxxx]
