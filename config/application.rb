@@ -24,3 +24,7 @@ module CodePiecesBackend
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+if Rails.env.development?
+  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+end
