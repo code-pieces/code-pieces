@@ -28,6 +28,7 @@ gem 'figaro'
 gem 'react_webpack_rails'
 gem 'rwr-redux'
 gem 'rwr-react_router'
+gem 'dotenv-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
