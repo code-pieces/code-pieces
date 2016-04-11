@@ -1,39 +1,69 @@
-#XEEM
-Bike/car repair service app
+# Code-Pieces Website
 
-Users will use XEEM to book bike/car repair service when their bike/car were broken on the street. The app will show the surrounding service shops in a map. Users can book by tapping the "book" button in each the service shop page. After being serviced, users can leave reviews about their experiences.
+**Code-Pieces** is a Ruby on Rails website let users generate code pieces.
 
-* Requirements
 
-[] Users can log in and see their current location
+## User Stories
 
-[] Users can see bike/car repair service shown in a map
+### Required:
+* API:
+  * [ ] Authentication with rails api.
+  * [ ] Download all shared snippets. 
 
-[] Users can tap on the service to check service quotes and book that service.
+* Developer:
+  * Sublime text: plugin (Python)
+    * [ ] Download snippet in sublime text 3
+    * [ ] Only public and shared snippet can be searched
+    * [ ] Search snippet
+  * Website
+    * [ ] Login using social network accounts: github, facebook, google
+    * [ ] Snippet management: create, search, edit, delete
 
-[] Users can leave review about the service after using 
+* Company
+    * [ ] Manage snippets: create, delete, publish, private
+    * [ ] Developers management
+  
+### Optional:
+* [ ] Snippet can have many versions, developers can update snippet and the owner must accept it before the new version can be published.
 
-[] Service owners can log in and upload service quotes
 
-[] Service owners can receive the request from the users
+The following **additional** features are implemented:
+* [ ] Search menu item matching its name or description.
 
-[] Service owners can show promotions signs on the map 
+The following **known issues**:
 
-* Optionals
 
-[] Users can track their maintainance history in a dashboard and get reminder for maintainance service
+Our small survey:
 
-[] Users can save the favorite list of the service shops
 
-[] Users can share their service experiences on social network (Facebook, Twitter, Instagram,..)
+### Wireframe Walkthrough
+![Video Walkthrough](xxxxxxx.gif)
 
-[] Users can hashtag/tag the owners in their reviews
+You can also try on browsers:
 
-[] Service owners can search reviews of users about their service and 
- reply on those reviews
- 
-[] Users can pay by credit card
+Technologies:
+ - Single Page with React + redux
+ - API, serializer
+ - Static web in some pages: login, etc.
 
-[] Users can get direction to the service shop
+## Notes
 
-MOCKUP link: https://www.dropbox.com/s/68tvpryvvjg5ulx/XEEM%20MOCKUP.zip?dl=0
+Describe any challenges encountered while building the app:
+
+
+## License
+
+    Copyright [2016] [xxxxxxxxxxx]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
