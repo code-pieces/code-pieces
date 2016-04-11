@@ -8,7 +8,7 @@
 ### Required:
 * API:
   * [ ] Authentication with rails api.
-  * [ ] Download all shared snippets. 
+  * [ ] Download all shared snippets.
 
 * Developer:
   * Sublime text: plugin (Python)
@@ -22,7 +22,7 @@
 * Company
     * [ ] Manage snippets: create, delete, publish, private
     * [ ] Developers management
-  
+
 ### Optional:
 * [ ] Snippet can have many versions, developers can update snippet and the owner must accept it before the new version can be published.
 
@@ -32,19 +32,24 @@ The following **additional** features are implemented:
 
 The following **known issues**:
 
-
-Our small survey:
+## Our small survey:
 
 
 ### Wireframe Walkthrough
 ![Video Walkthrough](xxxxxxx.gif)
 
-You can also try on browsers:
+## Installation Guide
+* Install Nodejs and npm. If you installed nodejs and npm, skip this step
+* Install npm packages for webpack: ```npm install ```
+* Open a commandline and run the command: ```npm run start-hot-dev```
+* Install rails database: ```rake db:create db:migrate```
+* Run rails server: ```rails s```
 
-Technologies:
- - Single Page with React + redux
- - API, serializer
- - Static web in some pages: login, etc.
+
+## Technologies:
+* Single Page with React + redux
+* API, serializer
+* Static web in some pages: login, etc.
 
 ## Notes
 

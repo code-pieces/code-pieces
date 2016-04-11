@@ -39,10 +39,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -56,9 +52,12 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
-    connection_pool (2.2.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    dotenv (2.1.1)
+    dotenv-rails (2.1.1)
+      dotenv (= 2.1.1)
+      railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.6.0)
     figaro (1.1.1)
@@ -128,13 +127,8 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
-    react-rails (1.6.2)
-      babel-transpiler (>= 0.7.0)
-      coffee-script-source (~> 1.8)
-      connection_pool
-      execjs
+    react_webpack_rails (0.3.1)
       rails (>= 3.2)
-      tilt
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -152,6 +146,10 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    rwr-react_router (0.3.0)
+      react_webpack_rails (>= 0.1.0)
+    rwr-redux (0.1.1)
+      react_webpack_rails (>= 0.1.0)
     sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -192,6 +190,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   coffee-rails (~> 4.1.0)
+  dotenv-rails
   figaro
   jbuilder (~> 2.0)
   jquery-rails
@@ -199,8 +198,10 @@ DEPENDENCIES
   pry-byebug
   rails (= 4.2.6)
   rails-api
-  react-rails
+  react_webpack_rails
   rspec-rails
+  rwr-react_router
+  rwr-redux
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

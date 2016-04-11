@@ -25,8 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-api'
 gem 'active_model_serializers'
 gem 'figaro'
-gem 'react-rails'
-
+gem 'react_webpack_rails'
+gem 'rwr-redux'
+gem 'rwr-react_router'
+gem 'dotenv-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

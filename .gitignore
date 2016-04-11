@@ -39,3 +39,6 @@ bower.json
 
 # Ignore application configuration
 /config/application.yml
+/node_modules
+/app/assets/javascripts/react_bundle.js
+/app/assets/stylesheets/react_bundle.css
