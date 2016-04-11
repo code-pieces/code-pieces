@@ -26,6 +26,8 @@ gem 'rails-api'
 gem 'active_model_serializers'
 gem 'figaro'
 gem 'react_webpack_rails'
+gem 'rwr-redux'
+gem 'rwr-react_router'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

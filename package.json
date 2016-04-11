@@ -30,7 +30,11 @@
     "node-sass": "^3.3.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
+    "react-redux": "^4.4.2",
     "react-webpack-rails": "^0.3.0",
+    "redux": "^3.4.0",
+    "rwr-react-router": "^0.3.0",
+    "rwr-redux": "^0.1.1",
     "sass-loader": "^3.0.0",
     "webpack": "^1.12.1"
   },
