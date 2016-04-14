@@ -1,1 +1,9 @@
-Our temporary home page!
+<h2>Our temporary home page!</h2>
+
+
+<% if current_user %>
+  <div class="container">
+    Your API_key: <%= current_user.api_key %>
+    <%= link_to "Reset", reset_api_key_users_path, method: :post, class: 'btn btn-primary' %>
+  </div>
+<% end %>
