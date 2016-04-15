@@ -1,34 +1,18 @@
 # Code-Pieces Website
 
-**Code-Pieces** is a Ruby on Rails website let users generate code pieces.
+**Code-Pieces** is a Sublime Text Plugin for Code Pieces.
 
 
 ## User Stories
 
 ### Required:
-* API:
-  * [ ] Authentication with rails api.
-  * [ ] Download all shared snippets. 
-
-* Developer:
-  * Sublime text: plugin (Python)
-    * [ ] Download snippet in sublime text 3
-    * [ ] Only public and shared snippet can be searched
-    * [ ] Search snippet
-  * Website
-    * [ ] Login using social network accounts: github, facebook, google
-    * [ ] Snippet management: create, search, edit, delete
-
-* Company
-    * [ ] Manage snippets: create, delete, publish, private
-    * [ ] Developers management
-  
+* [ ] Allow developers to download all of code snippets
+* [ ] Allow developers to add their api key
 ### Optional:
-* [ ] Snippet can have many versions, developers can update snippet and the owner must accept it before the new version can be published.
 
 
 The following **additional** features are implemented:
-* [ ] Search menu item matching its name or description.
+
 
 The following **known issues**:
 
