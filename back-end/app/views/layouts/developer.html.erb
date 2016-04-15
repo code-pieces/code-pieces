@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+    CodePiecesBackend
+    </title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="developer-layout">
+      <header class="navbar navbar-fixed-top navbar-light bg-faded header-view-container">
+        <a class="navbar-brand" href="#">GistBox</a>
+        <div class="header-controls">
+          <a href="#"><i class="material-icons">settings</i></a>
+          <a href="#"><i class="material-icons">help</i></a>
+          <a href="#"><i class="material-icons fa-rotate-90">autorenew</i></a>
+        </div>
+        <div class="header-divider"></div>
+        <div class="header-searchbox">
+          <div class="input-group">
+            <input type="text" class="form-control input-search" placeholder="Search by keyword or #label">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary clear-search" type="button"><i class="material-icons icon-search">search</i></button>
+            </span>
+          </div>
+        </div>
+        <!-- <div class="nav navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Features</a>
+          <a class="nav-item nav-link" href="#">Pricing</a>
+          <a class="nav-item nav-link" href="#">About</a>
+        </div> -->
+      </header>
+    </div>
+  </body>
+</html>

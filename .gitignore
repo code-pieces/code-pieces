@@ -38,3 +38,4 @@ bower.json
 
 # Ignore application configuration
 /config/application.yml
+back-end/tmp

@@ -1,4 +1,5 @@
 class SnippetsController < ApplicationController
+  layout 'developer'
   before_action :set_snippet, only: [:show, :edit, :update, :destroy]
 
   # GET /snippets
