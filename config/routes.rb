@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
+  resources :users do
+    collection do
+      post :reset_api_key
+    end
+  end
+
   root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
