@@ -18,21 +18,89 @@
           <a href="#"><i class="material-icons fa-rotate-90">autorenew</i></a>
         </div>
         <div class="header-divider"></div>
-        <div class="header-searchbox">
-          <div class="input-group">
-            <input type="text" class="form-control input-search" placeholder="Search by keyword or #label">
-            <span class="input-group-btn">
-              <button class="btn btn-secondary clear-search" type="button"><i class="material-icons icon-search">search</i></button>
-            </span>
+        <!-- <div class="input-group header-searchbox">
+          <input type="text" class="form-control input-search" placeholder="Search by keyword or #label">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary clear-search" type="button">
+            <i class="material-icons icon-search">search</i>
+            </button>
+          </span>
+        </div> -->
+        <div class="input-group header-searchbox">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button">
+            <i class="material-icons icon-search">search</i>
+            </button>
+          </span>
+        </div>
+        <div class="nav navbar-nav pull-right">
+          <a class="nav-link sign-out" href="#">Sign out</a>
+        </div>
+        <div class="header-nav">
+          <div class="nav navbar-nav pull-right">
+            <a class="nav-item nav-link " href="#"><i class="fa fa-gratipay" aria-hidden="true"></i> GitTip Us <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#"><i class="fa fa-scissors" aria-hidden="true"></i> Clipper</a>
+            <a class="nav-item nav-link header-gistbox-clipper" >&nbsp;</a>
+            <a class="nav-item nav-link" href="#"><i class="fa fa-github" aria-hidden="true"></i> hatu87</a>
           </div>
         </div>
-        <!-- <div class="nav navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Features</a>
-          <a class="nav-item nav-link" href="#">Pricing</a>
-          <a class="nav-item nav-link" href="#">About</a>
-        </div> -->
       </header>
+      <div class="main-view-container">
+        <div class="sidebar-container">
+          <div class="context-container">
+            <div class="context-selector">
+              <img src="https://avatars.githubusercontent.com/u/6060163?v=3">
+              <span class="context-selector-name">Personal Library</span>
+              <i class="fa fa-caret-down"></i>
+              <span class="context-select-spinner" style="display: none;"></span>
+              <div class="context-selector-dropdown" style="display: none;">
+                <ul>
+                  <li class="context-selector-personal-library context-selector-item-selected">
+                    <img src="https://avatars.githubusercontent.com/u/6060163?v=3">
+                    <span>Personal Library</span>
+                  </li>
+                  <li class="context-selector-start-new-group">
+                    <i class="icon-plus-sign-alt"></i>
+                    <span>Start New Group</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <ul class="sidebar">
+            <li class="sidebar-new-gist tip-right">
+              <i class="fa fa-file-o"></i> New Gist
+            </li>
+            <li class="sidebar-my-gists sidebar-selected" data-url="library/my-gists">
+              <i class="fa fa-list"></i> My Gists
+              <span class="sidebar-count">1</span>
+            </li>
+            <li class="sidebar-starred-gists" data-url="library/starred">
+              <i class="fa fa-star"></i> Starred
+              <span class="sidebar-count">0</span>
+            </li>
+            <li class="sidebar-spacer"></li>
+            <li class="sidebar-labels-heading">
+              <i class="fa fa-tags"></i> Labels
+              <span class="new-label-container">
+                <i class="fa fa-plus tip-top new-label" oldtitle="New Label" data-hasqtip="true"></i>
+              </span>
+            </li>
+            <li class="sidebar-labels-container" style="height: 179px;">
+              <ul class="sidebar-labels ui-sortable">
+                <li class="sidebar-label ui-droppable" data-label-id="1460472900525">
+                  <span class="sidebar-label-grapple"></span>
+                  <i class="fa fa-caret-square-o-down"></i>
+                  <span class="sidebar-label-name">Important</span>
+                  <span class="sidebar-count">0</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="content-container">content</div>
+      </div>
     </div>
   </body>
 </html>
