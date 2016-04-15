@@ -857,3 +857,1085 @@ ul.sidebar .sidebar-group-members>img:hover {
     border: 1px solid #777;
     box-shadow: 0 1px 2px #777
 }
+
+.split-view-content {
+    overflow: hidden
+}
+
+.split-view-content .focus-select-gist {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
+}
+
+.split-view-content .focus-select-gist>i {
+    font-size: 80px;
+    color: #999
+}
+
+.split-view-content .focus-select-gist>h2 {
+    font-weight: 300;
+    color: #999
+}
+
+.split-view-content .focus-view-gist {
+    overflow: hidden
+}
+
+.split-view-content .focus-view-gist .focus-view-header {
+    position: relative;
+    background: #f5f5f5;
+    padding: 12px 14px 18px 14px;
+    border-bottom: 1px solid #ddd
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-name {
+    margin-top: 5px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-meta {
+    font-size: 11px;
+    line-height: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-controls {
+    margin-top: 5px
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-controls::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-controls .focus-view-header-controls-left {
+    float: left
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-controls .focus-view-header-controls-right {
+    float: right
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-labels {
+    margin-top: 15px
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-right {
+    position: absolute;
+    top: 22px;
+    right: 13px
+}
+
+.split-view-content .focus-view-gist .focus-view-header .focus-view-header-right .focus-view-num-files {
+    margin-right: 3px;
+    font-size: 11px;
+    font-weight: bold
+}
+
+.split-view-content .focus-view-gist .focus-view-content {
+    overflow-y: auto
+}
+
+.split-view-content .focus-view-gist .focus-view-content .focus-view-description {
+    padding: 12px 14px 11px 14px;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal
+}
+
+.split-view-content .focus-view-gist .focus-view-content .focus-view-files-spinner {
+    margin-top: 40px
+}
+
+.split-view-content .focus-view-gist .add-another-file {
+    margin-top: 20px;
+    margin-left: 15px
+}
+
+.gist-no-labels {
+    display: inline-block;
+    padding: 1px 0 2px 0;
+    line-height: 12px;
+    font-weight: 400;
+    color: #999
+}
+
+.gist-edit-labels {
+    display: inline-block;
+    padding: 1px 5px;
+    color: #777;
+    border: 1px solid #999;
+    border-radius: 2px;
+    font-size: 10px;
+    line-height: 13px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.gist-edit-labels:hover {
+    color: #000;
+    border: 1px solid #000
+}
+
+.gist-edit-labels.gist-edit-label-active {
+    background: #fff
+}
+
+.gist-label {
+    display: inline-block;
+    padding: 1px 4px 2px 4px;
+    margin-right: 3px;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    line-height: 12px;
+    color: #fff;
+    font-size: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.btn-sm {
+  font-size: 12px;
+}
+
+.gist-file {
+    font-weight: normal;
+    border-bottom: 1px solid #ddd
+}
+
+.gist-file .gist-file-header {
+    position: relative;
+    padding: 12px 14px 11px 14px
+}
+
+.gist-file .gist-file-header .gist-file-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold
+}
+
+.gist-file .gist-file-header .gist-file-name .icon-chevron-right, .gist-file .gist-file-header .gist-file-name .icon-chevron-down {
+    margin-right: 5px
+}
+
+.gist-file .gist-file-header .gist-file-name .icon-file-alt {
+    margin-right: 3px
+}
+
+.gist-file .gist-file-header .gist-file-controls {
+    position: absolute;
+    top: 10px;
+    right: 15px
+}
+
+.gist-file .gist-file-header .gist-file-controls .gist-file-language {
+    margin-right: 5px
+}
+
+.gist-file .gist-file-header .gist-file-spinner {
+    position: absolute;
+    top: 20px;
+    right: 24px
+}
+
+.gist-file .gist-file-code {
+    margin: 0 15px 15px 15px
+}
+
+.gist-file .gist-file-code>pre {
+    background: #f7f7f7
+}
+
+.gist-file .gist-file-code>pre>code {
+    cursor: text
+}
+
+.gist-file .gist-file-code .markdown {
+    cursor: text;
+    background: white;
+    margin-top: 5px;
+    padding: 8px 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+.gist-file .gist-file-code .markdown div, .gist-file .gist-file-code .markdown dl, .gist-file .gist-file-code .markdown dt, .gist-file .gist-file-code .markdown dd, .gist-file .gist-file-code .markdown ul, .gist-file .gist-file-code .markdown ol, .gist-file .gist-file-code .markdown li, .gist-file .gist-file-code .markdown h1, .gist-file .gist-file-code .markdown h2, .gist-file .gist-file-code .markdown h3, .gist-file .gist-file-code .markdown h4, .gist-file .gist-file-code .markdown h5, .gist-file .gist-file-code .markdown h6, .gist-file .gist-file-code .markdown pre, .gist-file .gist-file-code .markdown code, .gist-file .gist-file-code .markdown form, .gist-file .gist-file-code .markdown fieldset, .gist-file .gist-file-code .markdown legend, .gist-file .gist-file-code .markdown input, .gist-file .gist-file-code .markdown textarea, .gist-file .gist-file-code .markdown p, .gist-file .gist-file-code .markdown blockquote, .gist-file .gist-file-code .markdown th, .gist-file .gist-file-code .markdown td {
+    margin: 0;
+    padding: 0
+}
+
+.gist-file .gist-file-code .markdown table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.gist-file .gist-file-code .markdown fieldset, .gist-file .gist-file-code .markdown img {
+    border: 0
+}
+
+.gist-file .gist-file-code .markdown address, .gist-file .gist-file-code .markdown caption, .gist-file .gist-file-code .markdown cite, .gist-file .gist-file-code .markdown code, .gist-file .gist-file-code .markdown dfn, .gist-file .gist-file-code .markdown em, .gist-file .gist-file-code .markdown strong, .gist-file .gist-file-code .markdown th, .gist-file .gist-file-code .markdown var {
+    font-style: normal;
+    font-weight: normal
+}
+
+.gist-file .gist-file-code .markdown ol, .gist-file .gist-file-code .markdown ul {
+    list-style: none
+}
+
+.gist-file .gist-file-code .markdown caption, .gist-file .gist-file-code .markdown th {
+    text-align: left
+}
+
+.gist-file .gist-file-code .markdown h1, .gist-file .gist-file-code .markdown h2, .gist-file .gist-file-code .markdown h3, .gist-file .gist-file-code .markdown h4, .gist-file .gist-file-code .markdown h5, .gist-file .gist-file-code .markdown h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+.gist-file .gist-file-code .markdown q:before, .gist-file .gist-file-code .markdown q:after {
+    content: ""
+}
+
+.gist-file .gist-file-code .markdown abbr, .gist-file .gist-file-code .markdown acronym {
+    border: 0;
+    font-variant: normal
+}
+
+.gist-file .gist-file-code .markdown sup {
+    vertical-align: text-top
+}
+
+.gist-file .gist-file-code .markdown sub {
+    vertical-align: text-bottom
+}
+
+.gist-file .gist-file-code .markdown input, .gist-file .gist-file-code .markdown textarea, .gist-file .gist-file-code .markdown select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.gist-file .gist-file-code .markdown input, .gist-file .gist-file-code .markdown textarea, .gist-file .gist-file-code .markdown select {
+    *font-size: 100%
+}
+
+.gist-file .gist-file-code .markdown legend {
+    color: #000
+}
+
+.gist-file .gist-file-code .markdown #yui3-css-stamp.cssreset {
+    display: none
+}
+
+.gist-file .gist-file-code .markdown h1, .gist-file .gist-file-code .markdown h2, .gist-file .gist-file-code .markdown h3, .gist-file .gist-file-code .markdown h4, .gist-file .gist-file-code .markdown h5, .gist-file .gist-file-code .markdown h6 {
+    font-weight: bold;
+    color: #000000
+}
+
+.gist-file .gist-file-code .markdown h1 {
+    margin: 0 0 10px 0;
+    color: #000000;
+    font-size: 28px;
+    line-height: 44px
+}
+
+.gist-file .gist-file-code .markdown h2 {
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-size: 24px;
+    line-height: 38px
+}
+
+.gist-file .gist-file-code .markdown h3 {
+    font-size: 18px
+}
+
+.gist-file .gist-file-code .markdown h4 {
+    font-size: 16px
+}
+
+.gist-file .gist-file-code .markdown h5 {
+    font-size: 14px
+}
+
+.gist-file .gist-file-code .markdown h6 {
+    color: #777777;
+    background-color: inherit;
+    font-size: 14px
+}
+
+.gist-file .gist-file-code .markdown hr {
+    height: 0.2em;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #CCCCCC
+}
+
+.gist-file .gist-file-code .markdown p, .gist-file .gist-file-code .markdown blockquote, .gist-file .gist-file-code .markdown ul, .gist-file .gist-file-code .markdown ol, .gist-file .gist-file-code .markdown dl, .gist-file .gist-file-code .markdown li, .gist-file .gist-file-code .markdown table, .gist-file .gist-file-code .markdown pre {
+    margin: 15px 0
+}
+
+.gist-file .gist-file-code .markdown blockquote {
+    padding: 0 15px;
+    border-left: 4px solid #ddd;
+    color: #777;
+    line-height: 20px
+}
+
+.gist-file .gist-file-code .markdown blockquote>:first-child {
+    margin-top: 0
+}
+
+.gist-file .gist-file-code .markdown blockquote p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .markdown em {
+    font-style: italic
+}
+
+.gist-file .gist-file-code .markdown strong {
+    font-weight: bold
+}
+
+.gist-file .gist-file-code .markdown code, .gist-file .gist-file-code .markdown pre {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    color: inherit
+}
+
+.gist-file .gist-file-code .markdown code {
+    border: 1px solid #EAEAEA;
+    margin: 0 2px;
+    padding: 0 5px
+}
+
+.gist-file .gist-file-code .markdown pre {
+    border: 1px solid #CCCCCC;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px
+}
+
+.gist-file .gist-file-code .markdown pre>code {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.gist-file .gist-file-code .markdown a, .gist-file .gist-file-code .markdown a:visited {
+    color: #4183C4;
+    background-color: inherit;
+    text-decoration: none
+}
+
+.gist-file .gist-file-code .markdown ul {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .markdown ul li {
+    margin: 0;
+    line-height: 22px;
+    list-style-type: disc
+}
+
+.gist-file .gist-file-code .markdown ol {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .markdown ol li {
+    margin: 0;
+    line-height: 22px;
+    list-style-type: decimal
+}
+
+.gist-file .gist-file-code .textile {
+    cursor: text;
+    background: white;
+    margin-top: 5px;
+    padding: 8px 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+.gist-file .gist-file-code .textile div, .gist-file .gist-file-code .textile dl, .gist-file .gist-file-code .textile dt, .gist-file .gist-file-code .textile dd, .gist-file .gist-file-code .textile ul, .gist-file .gist-file-code .textile ol, .gist-file .gist-file-code .textile li, .gist-file .gist-file-code .textile h1, .gist-file .gist-file-code .textile h2, .gist-file .gist-file-code .textile h3, .gist-file .gist-file-code .textile h4, .gist-file .gist-file-code .textile h5, .gist-file .gist-file-code .textile h6, .gist-file .gist-file-code .textile pre, .gist-file .gist-file-code .textile code, .gist-file .gist-file-code .textile form, .gist-file .gist-file-code .textile fieldset, .gist-file .gist-file-code .textile legend, .gist-file .gist-file-code .textile input, .gist-file .gist-file-code .textile textarea, .gist-file .gist-file-code .textile p, .gist-file .gist-file-code .textile blockquote, .gist-file .gist-file-code .textile th, .gist-file .gist-file-code .textile td {
+    margin: 0;
+    padding: 0
+}
+
+.gist-file .gist-file-code .textile table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.gist-file .gist-file-code .textile fieldset, .gist-file .gist-file-code .textile img {
+    border: 0
+}
+
+.gist-file .gist-file-code .textile address, .gist-file .gist-file-code .textile caption, .gist-file .gist-file-code .textile cite, .gist-file .gist-file-code .textile code, .gist-file .gist-file-code .textile dfn, .gist-file .gist-file-code .textile em, .gist-file .gist-file-code .textile strong, .gist-file .gist-file-code .textile th, .gist-file .gist-file-code .textile var {
+    font-style: normal;
+    font-weight: normal
+}
+
+.gist-file .gist-file-code .textile ol, .gist-file .gist-file-code .textile ul {
+    list-style: none
+}
+
+.gist-file .gist-file-code .textile caption, .gist-file .gist-file-code .textile th {
+    text-align: left
+}
+
+.gist-file .gist-file-code .textile h1, .gist-file .gist-file-code .textile h2, .gist-file .gist-file-code .textile h3, .gist-file .gist-file-code .textile h4, .gist-file .gist-file-code .textile h5, .gist-file .gist-file-code .textile h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+.gist-file .gist-file-code .textile q:before, .gist-file .gist-file-code .textile q:after {
+    content: ""
+}
+
+.gist-file .gist-file-code .textile abbr, .gist-file .gist-file-code .textile acronym {
+    border: 0;
+    font-variant: normal
+}
+
+.gist-file .gist-file-code .textile sup {
+    vertical-align: text-top
+}
+
+.gist-file .gist-file-code .textile sub {
+    vertical-align: text-bottom
+}
+
+.gist-file .gist-file-code .textile input, .gist-file .gist-file-code .textile textarea, .gist-file .gist-file-code .textile select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.gist-file .gist-file-code .textile input, .gist-file .gist-file-code .textile textarea, .gist-file .gist-file-code .textile select {
+    *font-size: 100%
+}
+
+.gist-file .gist-file-code .textile legend {
+    color: #000
+}
+
+.gist-file .gist-file-code .textile #yui3-css-stamp.cssreset {
+    display: none
+}
+
+.gist-file .gist-file-code .textile h1, .gist-file .gist-file-code .textile h2, .gist-file .gist-file-code .textile h3, .gist-file .gist-file-code .textile h4, .gist-file .gist-file-code .textile h5, .gist-file .gist-file-code .textile h6 {
+    font-weight: bold;
+    color: #000000
+}
+
+.gist-file .gist-file-code .textile h1 {
+    margin: 0 0 10px 0;
+    color: #000000;
+    font-size: 28px;
+    line-height: 44px
+}
+
+.gist-file .gist-file-code .textile h2 {
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-size: 24px;
+    line-height: 38px
+}
+
+.gist-file .gist-file-code .textile h3 {
+    font-size: 18px
+}
+
+.gist-file .gist-file-code .textile h4 {
+    font-size: 16px
+}
+
+.gist-file .gist-file-code .textile h5 {
+    font-size: 14px
+}
+
+.gist-file .gist-file-code .textile h6 {
+    color: #777777;
+    background-color: inherit;
+    font-size: 14px
+}
+
+.gist-file .gist-file-code .textile hr {
+    height: 0.2em;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #CCCCCC
+}
+
+.gist-file .gist-file-code .textile p, .gist-file .gist-file-code .textile blockquote, .gist-file .gist-file-code .textile ul, .gist-file .gist-file-code .textile ol, .gist-file .gist-file-code .textile dl, .gist-file .gist-file-code .textile li, .gist-file .gist-file-code .textile table, .gist-file .gist-file-code .textile pre {
+    margin: 15px 0
+}
+
+.gist-file .gist-file-code .textile blockquote {
+    padding: 0 15px;
+    border-left: 4px solid #ddd;
+    color: #777;
+    line-height: 20px
+}
+
+.gist-file .gist-file-code .textile blockquote>:first-child {
+    margin-top: 0
+}
+
+.gist-file .gist-file-code .textile blockquote p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .textile em {
+    font-style: italic
+}
+
+.gist-file .gist-file-code .textile strong {
+    font-weight: bold
+}
+
+.gist-file .gist-file-code .textile code, .gist-file .gist-file-code .textile pre {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    color: inherit
+}
+
+.gist-file .gist-file-code .textile code {
+    border: 1px solid #EAEAEA;
+    margin: 0 2px;
+    padding: 0 5px
+}
+
+.gist-file .gist-file-code .textile pre {
+    border: 1px solid #CCCCCC;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px
+}
+
+.gist-file .gist-file-code .textile pre>code {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.gist-file .gist-file-code .textile a, .gist-file .gist-file-code .textile a:visited {
+    color: #4183C4;
+    background-color: inherit;
+    text-decoration: none
+}
+
+.gist-file .gist-file-code .textile ul {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .textile ul li {
+    margin: 0;
+    line-height: 22px;
+    list-style-type: disc
+}
+
+.gist-file .gist-file-code .textile ol {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .textile ol li {
+    margin: 0;
+    line-height: 22px;
+    list-style-type: decimal
+}
+
+.gist-file .gist-editor-container {
+    margin: 0 15px 15px 15px
+}
+
+code, pre {
+    padding: 0 3px 2px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #333333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+
+code {
+    padding: 2px 4px;
+    color: #d14;
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8
+}
+
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 20px;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    white-space: pre-wrap;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+pre.prettyprint {
+    margin-bottom: 20px
+}
+
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    border: 0
+}
+
+.pre-scrollable {
+    max-height: 340px;
+    overflow-y: scroll
+}
+
+code[class*="language-"], pre[class*="language-"] {
+    color: black;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"]::-moz-selection, code[class*="language-"]::-moz-selection, code[class*="language-"]::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"]::selection, code[class*="language-"]::selection, code[class*="language-"]::selection {
+    text-shadow: none;
+    background: #b3d4fc
+}
+
+@media print {
+    code[class*="language-"], pre[class*="language-"] {
+        text-shadow: none
+    }
+}
+
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto
+}
+
+:not(pre)>code[class*="language-"], pre[class*="language-"] {
+    background: #f5f2f0
+}
+
+:not(pre)>code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: slategray
+}
+
+.token.punctuation {
+    color: #999
+}
+
+.namespace {
+    opacity: .7
+}
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+    color: #905
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+    color: #690
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+    color: #a67f59;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.token.atrule, .token.attr-value, .token.keyword {
+    color: #07a
+}
+
+.token.function {
+    color: #DD4A68
+}
+
+.token.regex, .token.important, .token.variable {
+    color: #e90
+}
+
+.token.important, .token.bold {
+    font-weight: bold
+}
+
+.token.italic {
+    font-style: italic
+}
+
+.token.entity {
+    cursor: help
+}
+
+pre[data-line] {
+    position: relative;
+    padding: 1em 0 1em 3em
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: inherit 0;
+    margin-top: 1em;
+    background: rgba(153, 122, 102, 0.08);
+    background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+    background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+    background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+    background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre
+}
+
+.line-highlight:before, .line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    top: .4em;
+    left: .6em;
+    min-width: 1em;
+    padding: 0 .5em;
+    background-color: rgba(153, 122, 102, 0.4);
+    color: #f5f2f0;
+    font: bold 65%/1.5 sans-serif;
+    text-align: center;
+    vertical-align: .3em;
+    border-radius: 999px;
+    text-shadow: none;
+    box-shadow: 0 1px white
+}
+
+.line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em
+}
+
+pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber
+}
+
+pre.line-numbers>code {
+    position: relative
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.line-numbers-rows>span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber
+}
+
+.line-numbers-rows>span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right
+}
+
+.field-error {
+    display: block;
+    color: #bb1900;
+    font-size: 11px;
+    font-weight: bold
+}
+
+.gist-file .gist-file-code .markdown {
+    cursor: text;
+    background: white;
+    margin-top: 5px;
+    padding: 8px 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.15)
+}
+
+.gist-file .gist-file-code .markdown div, .gist-file .gist-file-code .markdown dl, .gist-file .gist-file-code .markdown dt, .gist-file .gist-file-code .markdown dd, .gist-file .gist-file-code .markdown ul, .gist-file .gist-file-code .markdown ol, .gist-file .gist-file-code .markdown li, .gist-file .gist-file-code .markdown h1, .gist-file .gist-file-code .markdown h2, .gist-file .gist-file-code .markdown h3, .gist-file .gist-file-code .markdown h4, .gist-file .gist-file-code .markdown h5, .gist-file .gist-file-code .markdown h6, .gist-file .gist-file-code .markdown pre, .gist-file .gist-file-code .markdown code, .gist-file .gist-file-code .markdown form, .gist-file .gist-file-code .markdown fieldset, .gist-file .gist-file-code .markdown legend, .gist-file .gist-file-code .markdown input, .gist-file .gist-file-code .markdown textarea, .gist-file .gist-file-code .markdown p, .gist-file .gist-file-code .markdown blockquote, .gist-file .gist-file-code .markdown th, .gist-file .gist-file-code .markdown td {
+    margin: 0;
+    padding: 0
+}
+
+.gist-file .gist-file-code .markdown table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.gist-file .gist-file-code .markdown fieldset, .gist-file .gist-file-code .markdown img {
+    border: 0
+}
+
+.gist-file .gist-file-code .markdown address, .gist-file .gist-file-code .markdown caption, .gist-file .gist-file-code .markdown cite, .gist-file .gist-file-code .markdown code, .gist-file .gist-file-code .markdown dfn, .gist-file .gist-file-code .markdown em, .gist-file .gist-file-code .markdown strong, .gist-file .gist-file-code .markdown th, .gist-file .gist-file-code .markdown var {
+    font-style: normal;
+    font-weight: normal
+}
+
+.gist-file .gist-file-code .markdown ol, .gist-file .gist-file-code .markdown ul {
+    list-style: none
+}
+
+.gist-file .gist-file-code .markdown caption, .gist-file .gist-file-code .markdown th {
+    text-align: left
+}
+
+.gist-file .gist-file-code .markdown h1, .gist-file .gist-file-code .markdown h2, .gist-file .gist-file-code .markdown h3, .gist-file .gist-file-code .markdown h4, .gist-file .gist-file-code .markdown h5, .gist-file .gist-file-code .markdown h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+.gist-file .gist-file-code .markdown q:before, .gist-file .gist-file-code .markdown q:after {
+    content: ""
+}
+
+.gist-file .gist-file-code .markdown abbr, .gist-file .gist-file-code .markdown acronym {
+    border: 0;
+    font-variant: normal
+}
+
+.gist-file .gist-file-code .markdown sup {
+    vertical-align: text-top
+}
+
+.gist-file .gist-file-code .markdown sub {
+    vertical-align: text-bottom
+}
+
+.gist-file .gist-file-code .markdown input, .gist-file .gist-file-code .markdown textarea, .gist-file .gist-file-code .markdown select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+.gist-file .gist-file-code .markdown input, .gist-file .gist-file-code .markdown textarea, .gist-file .gist-file-code .markdown select {
+    *font-size: 100%
+}
+
+.gist-file .gist-file-code .markdown legend {
+    color: #000
+}
+
+.gist-file .gist-file-code .markdown #yui3-css-stamp.cssreset {
+    display: none
+}
+
+.gist-file .gist-file-code .markdown h1, .gist-file .gist-file-code .markdown h2, .gist-file .gist-file-code .markdown h3, .gist-file .gist-file-code .markdown h4, .gist-file .gist-file-code .markdown h5, .gist-file .gist-file-code .markdown h6 {
+    font-weight: bold;
+    color: #000000
+}
+
+.gist-file .gist-file-code .markdown h1 {
+    margin: 0 0 10px 0;
+    color: #000000;
+    font-size: 28px;
+    line-height: 44px
+}
+
+.gist-file .gist-file-code .markdown h2 {
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #CCCCCC;
+    color: #000000;
+    font-size: 24px;
+    line-height: 38px
+}
+
+.gist-file .gist-file-code .markdown h3 {
+    font-size: 18px
+}
+
+.gist-file .gist-file-code .markdown h4 {
+    font-size: 16px
+}
+
+.gist-file .gist-file-code .markdown h5 {
+    font-size: 14px
+}
+
+.gist-file .gist-file-code .markdown h6 {
+    color: #777777;
+    background-color: inherit;
+    font-size: 14px
+}
+
+.gist-file .gist-file-code .markdown hr {
+    height: 0.2em;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #CCCCCC
+}
+
+.gist-file .gist-file-code .markdown p, .gist-file .gist-file-code .markdown blockquote, .gist-file .gist-file-code .markdown ul, .gist-file .gist-file-code .markdown ol, .gist-file .gist-file-code .markdown dl, .gist-file .gist-file-code .markdown li, .gist-file .gist-file-code .markdown table, .gist-file .gist-file-code .markdown pre {
+    margin: 15px 0
+}
+
+.gist-file .gist-file-code .markdown blockquote {
+    padding: 0 15px;
+    border-left: 4px solid #ddd;
+    color: #777;
+    line-height: 20px
+}
+
+.gist-file .gist-file-code .markdown blockquote>:first-child {
+    margin-top: 0
+}
+
+.gist-file .gist-file-code .markdown blockquote p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .markdown em {
+    font-style: italic
+}
+
+.gist-file .gist-file-code .markdown strong {
+    font-weight: bold
+}
+
+.gist-file .gist-file-code .markdown code, .gist-file .gist-file-code .markdown pre {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    color: inherit
+}
+
+.gist-file .gist-file-code .markdown code {
+    border: 1px solid #EAEAEA;
+    margin: 0 2px;
+    padding: 0 5px
+}
+
+.gist-file .gist-file-code .markdown pre {
+    border: 1px solid #CCCCCC;
+    line-height: 19px;
+    overflow: auto;
+    padding: 6px 10px
+}
+
+.gist-file .gist-file-code .markdown pre>code {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.gist-file .gist-file-code .markdown a, .gist-file .gist-file-code .markdown a:visited {
+    color: #4183C4;
+    background-color: inherit;
+    text-decoration: none
+}
+
+.gist-file .gist-file-code .markdown ul {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .markdown ul li {
+    margin: 0;
+    line-height: 22px;
+    list-style-type: disc
+}
+
+.gist-file .gist-file-code .markdown ol {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 22px
+}
+
+.gist-file .gist-file-code .markdown ol li {
+    margin: 0;
+    line-height: 22px;
+    list-style-type: decimal
+}
