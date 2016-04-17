@@ -1,8 +1,8 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
+/back-end/log/*
+/back-end/tmp/
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
@@ -13,7 +13,7 @@ rerun.txt
 pickle-email-*.html
 
 # Environment variables
-.env
+/back-end/.env
 
 ## Environment normalization:
 /.bundle
