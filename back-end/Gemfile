@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'rails-api'
 gem 'active_model_serializers'
 gem 'dotenv-rails'
+gem 'activeadmin', '~> 1.0.0.pre2'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

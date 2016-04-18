@@ -16,6 +16,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authenticate_admin!
+    unless current_user && current_user.is_admin?
+      flash[:notice] = "Only admin can access this."
+      redirect_to root_path
+    end
+  end
+
   # include ActionController::HttpAuthentication::Token::ControllerMethods
 
   # # Add a before_action to authenticate all requests.
