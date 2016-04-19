@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api, defaults: { format: :json } do
+    resources :snippets
+  end
+
   root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
