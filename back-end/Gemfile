@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-github', '1.1.1'
+gem 'omniauth-github'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -30,7 +30,7 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'font-awesome-rails'
 gem 'material_icons'
-
+gem 'rails-api', require: 'rails-api/action_controller/api'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
