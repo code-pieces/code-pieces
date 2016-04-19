@@ -1,0 +1,297 @@
+ul.sidebar {
+    padding-left:0px;
+    margin: 0;
+    font-size: 13px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+ul.sidebar>li {
+    position: relative;
+    list-style: none;
+    padding: 7px 7px 7px 44px;
+    color: #f1f1f1;
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #0a0c0e;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+ul.sidebar>li:hover {
+    color: #fff;
+    background: #111;
+    border-top: 1px solid #111
+}
+
+ul.sidebar>li.sidebar-selected {
+    background: #fff;
+    color: #333;
+    cursor: default
+}
+
+ul.sidebar>li.sidebar-selected i {
+    opacity: 1.0
+}
+
+ul.sidebar>li.sidebar-selected:hover {
+    background: white;
+    color: #333
+}
+
+ul.sidebar>li.sidebar-new-gist {
+    margin: 20px 0
+}
+
+ul.sidebar>li.sidebar-my-gists, ul.sidebar>li.sidebar-group-gists {
+    margin-top: 20px
+}
+
+ul.sidebar>li.sidebar-spacer {
+    border: 0;
+    height: 10px;
+    cursor: default;
+    background: #191919
+}
+
+ul.sidebar>li.sidebar-spacer:hover {
+    background: #191919
+}
+
+ul.sidebar>li i {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 14px
+}
+
+ul.sidebar>li .sidebar-count {
+    position: absolute;
+    right: 15px;
+    text-align: right;
+    color: #999;
+    font-size: 12px;
+    font-weight: bold
+}
+
+ul.sidebar>li .sidebar-count>i {
+    position: static;
+    font-size: 12px
+}
+
+ul.sidebar li.sidebar-labels-heading {
+    border: none;
+    border-bottom: 1px solid #0a0c0e;
+    color: #777;
+    cursor: default
+}
+
+ul.sidebar li.sidebar-labels-heading:hover {
+    border-bottom: 1px solid #0a0c0e;
+    color: #777;
+    background: #191919
+}
+
+ul.sidebar li.sidebar-labels-heading .new-label-container {
+    position: absolute;
+    top: 1px;
+    right: 45px;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer
+}
+
+ul.sidebar li.sidebar-labels-heading .new-label-container:hover {
+    color: #fff
+}
+
+ul.sidebar li.sidebar-labels-container {
+    padding: 0;
+    border: none;
+    cursor: default;
+    overflow-y: auto;
+    height: 400px
+}
+
+ul.sidebar li.sidebar-labels-container:hover {
+    color: #eee;
+    background: #191919
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels {
+    margin: 0
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li {
+    height: 22px;
+    position: relative;
+    margin: 0;
+    padding: 7px 7px 7px 44px;
+    list-style: none;
+    color: #f1f1f1;
+    cursor: pointer
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-no-labels {
+    color: #777
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label {
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #0a0c0e
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected {
+    background: #fff;
+    color: #333;
+    cursor: default
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected i {
+    opacity: 1.0
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected:hover {
+    background: white;
+    color: #333
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected:hover .sidebar-label-color:not(.label-controls-disabled) {
+    cursor: pointer
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-selected:hover .sidebar-label-color:not(.label-controls-disabled):hover {
+    border: 1px solid #000 !important
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-drop-active {
+    background: #333;
+    color: #fff
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label.sidebar-drop-hover {
+    background: #ffc;
+    color: #333
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label:hover {
+    color: #fff;
+    background: #111;
+    border-top: 1px solid #111
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label:hover .sidebar-label-color .edit-label {
+    display: inline
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label:hover .sidebar-label-grapple {
+    display: inline-block
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-grapple {
+    display: none;
+    position: absolute;
+    top: 11px;
+    left: 0px;
+    width: 20px;
+    height: 12px;
+    background: url("/images/icons/sidebar-label-grapple.png") no-repeat 50% 0;
+    cursor: move
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-color {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: solid
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-color:not(.label-controls-disabled):hover {
+    border: 1px solid #fff !important
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-color .edit-label {
+    display: none;
+    top: 0;
+    left: 2px;
+    font-size: 12px;
+    color: #fff
+}
+
+ul.sidebar li.sidebar-labels-container ul.sidebar-labels>li.sidebar-label .sidebar-label-name {
+    display: inline-block;
+    width: 125px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+ul.sidebar .sidebar-group-members-heading {
+    position: relative;
+    color: #777;
+    cursor: default
+}
+
+ul.sidebar .sidebar-group-members-heading:hover {
+    border-top: 1px solid #212121;
+    background: transparent;
+    color: #777
+}
+
+ul.sidebar .sidebar-group-members-heading .invite-members-container {
+    position: absolute;
+    top: 1px;
+    right: 45px;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer
+}
+
+ul.sidebar .sidebar-group-members-heading .invite-members-container:hover {
+    color: #fff
+}
+
+ul.sidebar .sidebar-group-members {
+    height: 50px;
+    padding: 16px;
+    background: #000;
+    overflow-y: auto;
+    cursor: default
+}
+
+ul.sidebar .sidebar-group-members::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both
+}
+
+ul.sidebar .sidebar-group-members:hover {
+    border-top: 1px solid #212121;
+    background: #000
+}
+
+ul.sidebar .sidebar-group-members>img {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    float: left
+}
+
+ul.sidebar .sidebar-group-members>img:hover {
+    opacity: 0.5
+}

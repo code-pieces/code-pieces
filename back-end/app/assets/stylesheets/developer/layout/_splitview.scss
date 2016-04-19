@@ -1,0 +1,41 @@
+.split-view {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.split-view .split-view-list {
+    width: 354px;
+    border-right: 1px solid #ddd;
+    height: 100%;
+}
+
+.split-view .split-view-list .split-view-list-refresh-notice {
+    position: relative;
+    padding: 10px 15px;
+    background: #ffc;
+    border-bottom: 1px solid #ddd;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.split-view .split-view-list .split-view-list-refresh-notice:hover {
+    background: #ffffba
+}
+
+.split-view .split-view-list .split-view-list-refresh-notice>i {
+    position: absolute;
+    top: 14px;
+    right: 15px
+}
+
+.split-view .split-view-list .split-view-list-gists {
+    overflow-y: auto
+}
+
+.split-view .split-view-content {
+    position: absolute;
+    top: 0;
+    left: 355px
+}

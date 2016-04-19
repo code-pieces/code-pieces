@@ -1,0 +1,91 @@
+
+
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+
+.developer-layout {
+  font-size:14px;
+  height: 100%;
+  @import "./developer/layout/_header";
+
+  .main-view-container {
+    height: 100%;
+
+    @import "./developer/layout/_sidebar";
+    .content-container {
+      padding-left: 220px;
+      height:100%;
+    }
+  }
+}
+
+@import "./developer/components/_sidebar";
+@import "./developer/layout/_splitview";
+@import "./developer/layout/_filterBar";
+@import "./developer/layout/_splitViewContent";
+@import "./developer/layout/_splitGist";
+@import "./developer/components/_button";
+
+
+
+
+
+.gist-no-labels {
+    display: inline-block;
+    padding: 1px 0 2px 0;
+    line-height: 12px;
+    font-weight: 400;
+    color: #999
+}
+
+.gist-edit-labels {
+    display: inline-block;
+    padding: 1px 5px;
+    color: #777;
+    border: 1px solid #999;
+    border-radius: 2px;
+    font-size: 10px;
+    line-height: 13px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.gist-edit-labels:hover {
+    color: #000;
+    border: 1px solid #000
+}
+
+.gist-edit-labels.gist-edit-label-active {
+    background: #fff
+}
+
+.gist-label {
+    display: inline-block;
+    padding: 1px 4px 2px 4px;
+    margin-right: 3px;
+    border-width: 1px;
+    border-radius: 2px;
+    border-style: solid;
+    line-height: 12px;
+    color: #fff;
+    font-size: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}

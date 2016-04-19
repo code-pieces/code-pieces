@@ -1,0 +1,51 @@
+.filter-bar {
+    position: relative;
+    background: #f5f5f5;
+    padding: 12px 14px 11px 14px;
+    border-bottom: 1px solid #ddd
+}
+
+.filter-bar .btn-group {
+    margin-top: 2px
+}
+
+.filter-bar .btn-group .btn.active {
+    cursor: default
+}
+
+.filter-bar .filter-bar-sorter {
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    font-size: 12px
+}
+
+.filter-bar .filter-bar-sorter a {
+    display: inline-block;
+    margin-left: 1px;
+    color: #999;
+    text-decoration: none
+}
+
+.filter-bar .filter-bar-sorter a.filter-by-created {
+    width: 60px;
+    text-align: right
+}
+
+.filter-bar .filter-bar-sorter a.filter-by-updated {
+    width: 65px;
+    text-align: right
+}
+
+.filter-bar .filter-bar-sorter a.filter-active {
+    color: #333;
+    opacity: 1.0
+}
+
+.filter-bar .filter-bar-sorter a:hover {
+    color: #333
+}
+
+.filter-bar .filter-bar-sorter a {
+    margin-left: 5px
+}
