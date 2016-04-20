@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require tether
-//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require tether
+//= require materialize-sprockets
 //= require turbolinks
 //= require prism
 //= require_tree .

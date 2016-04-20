@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+  namespace :developer do
+    get 'dashboard', to: 'dashboard#index'
+  end
+
   ActiveAdmin.routes(self)
   resources :snippets
-  get 'auth/:provider/callback', to: 'sessions#create'
+
+  get 'auth/login', to: 'sessions#new'
+  post 'auth/login', to: 'sessions#create'
+  delete 'auth/logout', to: 'sessions#destroy'
+
+  get 'auth/:provider/callback', to: 'sessions#callback'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
