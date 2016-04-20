@@ -4,16 +4,17 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
-      user.provider = auth.provider
-      user.uid = auth.uid
-      user.name = auth.info.name
-      user.oauth_token = auth.credentials.token
-      #user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-      user.save!
-    end
-  end
+
+  # def self.from_omniauth(auth)
+  #   SocialAccount.where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |social_account|
+  #     user.provider = auth.provider
+  #     user.uid = auth.uid
+  #     user.name = auth.info.name
+  #     user.oauth_token = auth.credentials.token
+  #     #user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+  #     user.save!
+  #   end
+  # end
 
   # Assign an API key on create
   before_create do |user|
@@ -41,24 +42,23 @@ class User < ActiveRecord::Base
     # find users by uid
 
     email = auth[:info][:email] || "#{auth[:uid]}@facebook.com"
-    account = Account.find_by_uid(auth[:uid])
+    account = SocialAccount.find_by_uid(auth[:uid])
 
     if account.nil?
       # do not have facebook acccount
       # check if user is existed by email
       existed_user = User.find_by_email(email)
 
-      existed_user && existed_user.accounts.create(uid: auth[:uid], provider: auth[:provider]).user
-      # if existed_user.nil?
-      #   # cannot find old email. Your account is not existed
-      #   # create new user & account
-      #   existed_user = User.create(name: auth[:info][:name], email: email,
-      #     password: '123', password_confirmation: '123')
-      # end
+      # existed_user && existed_user.accounts.create(uid: auth[:uid], provider: auth[:provider]).user
+      if existed_user.nil?
+        # cannot find old email. Your account is not existed
+        # create new user & account
+        existed_user = User.create(name: auth[:info][:name], email: email,
+          password: "123")
+      end
 
-      # existed_user.accounts.create(uid: auth[:uid], provider: auth[:provider])
-
-      # existed_user
+      existed_user.social_accounts.create(uid: auth[:uid], provider: auth[:provider])
+      existed_user
     else
       # facebook account is existed
       account.user

@@ -35,7 +35,7 @@ class SessionsController < ApplicationController
       # log in user here
       # binding.pry
       session[:user_id] = user.id
-      redirect_to user_messages_path(user.id)
+      redirect_to developer_dashboard_index_path
     else
       # don't log user in
       flash[:error] = 'Your account is not existed. Please sign in with the Facebook account with its email in our system.'
