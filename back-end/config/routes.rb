@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :snippets
+
+  get 'auth/login', to: 'sessions#new'
+  post 'auth/login', to: 'session#create'
+  delete 'auth/logout', to: 'session#delete'
+
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
