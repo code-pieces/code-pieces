@@ -1,0 +1,18 @@
+[{
+  "id" : "codepieces",
+  "caption": "C.Pieces",
+  "children":
+  [{
+    "caption" : "Browse all Snippets",
+    "command" : "code_pieces_browse_snippets"
+  }, {
+    "caption" : "Remove all Snippets",
+    "command" : "code_pieces_clear_snippets"
+  }, {
+    "caption" : "Change API Key",
+    "command" : "code_pieces_change_api_key"
+  }, {
+    "caption" : "Resync Snippets",
+    "command" : "code_pieces_resync_snippets"
+  }]
+}]
