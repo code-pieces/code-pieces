@@ -99,13 +99,13 @@ class CodePiecesBrowseSnippetsCommand(sublime_plugin.TextCommand):
       if re.search('\.sublime-snippet$', f):
         menu_items.append(self.menu_item(Persistent.path('sublime-snippets', f)))
 
-    self.view.window().show_quick_panel(
-      menu_items,
-      lambda idx:
+    def on_done(idx):
+      if idx != -1:
         self.view.run_command('insert_snippet', {
           'contents': menu_items[idx][1]
         })
-    )
+
+    self.view.window().show_quick_panel(menu_items, on_done)
 
   def menu_item(self, filepath):
     root = ET.parse(filepath).getroot()
