@@ -2,27 +2,6 @@ import sublime, sublime_plugin
 import os, os.path, shutil, urllib, errno, json, logging, re
 import xml.etree.ElementTree as ET
 
-class Client:
-  def __init__(self):
-    self.api_key = Persistent.read_file(['api_key']) if Persistent.file_exists(['api_key']) else ''
-
-  def set_api_key(self, new_api_key):
-    self.api_key = new_api_key
-    Persistent.write_file(['api_key'], self.api_key)
-
-  def get_snippets(self):
-    res = urllib.request.urlopen('http://0.0.0.0:3000/api/snippets?for=sublime&api_key=' + self.api_key)
-    body_json = json.loads(res.readall().decode())
-    snippets = []
-
-    for snippet_raw in body_json:
-      snippet = Snippet(snippet_raw)
-      snippets.append(snippet)
-
-    return snippets
-
-client = Client();
-
 class Persistent:
   @staticmethod
   def mkdir_p(path):
@@ -58,6 +37,27 @@ class Persistent:
   def clear_snippets():
     if Persistent.file_exists(['sublime-snippets']):
       shutil.rmtree(Persistent.path('sublime-snippets'))
+
+class Client:
+  def __init__(self):
+    self.api_key = Persistent.read_file(['api_key']) if Persistent.file_exists(['api_key']) else ''
+
+  def set_api_key(self, new_api_key):
+    self.api_key = new_api_key
+    Persistent.write_file(['api_key'], self.api_key)
+
+  def get_snippets(self):
+    res = urllib.request.urlopen('http://0.0.0.0:3000/api/snippets?for=sublime&api_key=' + self.api_key)
+    body_json = json.loads(res.readall().decode())
+    snippets = []
+
+    for snippet_raw in body_json:
+      snippet = Snippet(snippet_raw)
+      snippets.append(snippet)
+
+    return snippets
+
+client = Client();
 
 class Snippet:
   def __init__(self, raw_data):
