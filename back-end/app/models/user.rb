@@ -18,7 +18,9 @@ class User < ActiveRecord::Base
 
   # Assign an API key on create
   before_create do |user|
-    user.api_key = user.generate_api_key
+    if user.api_key.nil?
+      user.api_key = user.generate_api_key
+    end
   end
 
   # Generate a unique API key

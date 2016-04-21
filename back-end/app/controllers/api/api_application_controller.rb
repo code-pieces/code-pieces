@@ -1,4 +1,4 @@
-class API::APIApplicationController < ActionController::API
+class Api::APIApplicationController < ActionController::API
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   # Add a before_action to authenticate all requests.
@@ -14,13 +14,16 @@ class API::APIApplicationController < ActionController::API
   end
 
   def authenticate_token
-    authenticate_with_http_token do |token, options|
-      @current_user = User.find_by(api_key: token)
-    end
+    @current_user = User.find_by(api_key: api_key)
   end
 
   def render_unauthorized(realm = "Application")
     self.headers["WWW-Authenticate"] = %(Token realm="#{realm.gsub(/"/, "")}")
     render json: 'Bad credentials', status: :unauthorized
+  end
+
+  private
+  def api_key
+    return params[:api_key]
   end
 end
