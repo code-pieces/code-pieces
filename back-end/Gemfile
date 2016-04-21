@@ -23,7 +23,7 @@ gem 'bcrypt'
 gem 'nokogiri'
 
 gem 'rails-api', require: 'rails-api/action_controller/api'
-
+gem 'ace-rails-ap'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end

@@ -16,4 +16,7 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require prism
+//= require ace-rails-ap
+//= require ace/theme-monokai
+//= require ace/mode-javascript
 //= require_tree .

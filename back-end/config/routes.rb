@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   namespace :developer do
     get 'dashboard', to: 'dashboard#index'
+
+    resources :snippets
   end
 
   ActiveAdmin.routes(self)

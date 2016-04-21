@@ -25,15 +25,13 @@ html {
 }
 
 @import "./components/_sidebar";
-@import "./layout/_splitview";
+@import "./layout/_splitView";
 @import "./layout/_filterBar";
 @import "./layout/_splitViewContent";
 @import "./layout/_splitGist";
+@import "./layout/_focusViewEdit";
+@import "./layout/_gistFile";
 @import "./components/_button";
-
-
-
-
 
 .gist-no-labels {
     display: inline-block;
