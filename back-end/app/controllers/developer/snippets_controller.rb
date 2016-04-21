@@ -23,6 +23,20 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
     session[:selected_snippet_id] = @snippet.id
   end
 
+  def edit
+    @snippet = Snippet.find_by_id(params[:id])
+  end
+
+  def update
+    @snippet = Snippet.find_by_id(params[:id])
+
+    if @snippet.update(snippet_params)
+      redirect_to developer_dashboard_path
+    else
+      render :edit
+    end
+  end
+
   private
   def snippet_params
     params.require(:snippet).permit(:name, :description, :contents, :created_by, :language_id, :scope, :tag_trigger)

@@ -17,6 +17,5 @@
 //= require turbolinks
 //= require prism
 //= require ace-rails-ap
-//= require ace/theme-monokai
-//= require ace/mode-javascript
+//= require ace/theme-github
 //= require_tree .
