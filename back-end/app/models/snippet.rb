@@ -13,6 +13,6 @@ class Snippet < ActiveRecord::Base
       }
     end
 
-    {name: name, contents: builder.to_xml}
+    {id: id, name: name, contents: builder.to_xml}
   end
 end
