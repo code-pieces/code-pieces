@@ -22,6 +22,9 @@ gem 'materialize-sass'
 gem 'bcrypt'
 gem 'nokogiri'
 
+gem 'react-rails'
+gem 'browserify-rails'
+
 gem 'rails-api', require: 'rails-api/action_controller/api'
 gem 'ace-rails-ap'
 source 'https://rails-assets.org' do

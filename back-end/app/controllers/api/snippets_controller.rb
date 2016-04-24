@@ -2,7 +2,7 @@ class Api::SnippetsController < Api::APIApplicationController
   before_action :set_snippet, only: [:show, :update, :destroy]
 
   def index
-    @snippets = Snippet.all
+    @snippets = @current_user.snippets
 
     if params[:for] == 'sublime'
       @snippets = @snippets.map do |snippet|

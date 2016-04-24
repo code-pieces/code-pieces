@@ -18,4 +18,6 @@
 //= require prism
 //= require ace-rails-ap
 //= require ace/theme-github
-//= require_tree .
+//= require guest_layout
+//= require react_ujs
+//= require components
