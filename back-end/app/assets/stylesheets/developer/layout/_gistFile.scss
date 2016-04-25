@@ -5,7 +5,8 @@
 
 .gist-file .gist-file-header {
     position: relative;
-    padding: 12px 14px 11px 14px
+    padding: 12px 14px 11px 14px;
+    overflow: auto
 }
 
 .gist-file .gist-file-header .gist-file-name {

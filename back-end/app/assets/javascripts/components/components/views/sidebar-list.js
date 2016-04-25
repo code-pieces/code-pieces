@@ -6,6 +6,7 @@ import NewGistModal from './new-gist-modal';
 export default function(props) {
   let modalId = 'myModal';
   return (
+    <div>
     <ul className="sidebar">
         <li className="sidebar-new-gist tip-right">
           <button onClick={()=>{
@@ -14,7 +15,7 @@ export default function(props) {
           }}>
             <i className="fa fa-file-o"></i> New Gist
           </button>
-          <NewGistModal id="myModal"/>
+
         </li>
         <li className="sidebar-my-gists sidebar-selected" data-url="library/my-gists">
           <i className="fa fa-list">
@@ -59,7 +60,9 @@ export default function(props) {
             </li>
           </ul>
         </li>
-      </ul>
 
+      </ul>
+      <NewGistModal id="myModal"/>
+      </div>
     );
 }

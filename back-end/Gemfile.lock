@@ -2,7 +2,6 @@ GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
   specs:
-    ace-rails-ap (4.0.2)
     actionmailer (4.2.6)
       actionpack (= 4.2.6)
       actionview (= 4.2.6)
@@ -289,7 +288,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ace-rails-ap
   active_model_serializers
   activeadmin (~> 1.0.0.pre2)
   bcrypt

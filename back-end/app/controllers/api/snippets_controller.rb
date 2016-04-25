@@ -50,7 +50,7 @@ class Api::SnippetsController < Api::APIApplicationController
     end
 
     def snippet_params
-      params.require(:snippet).permit(:name, :contents, :created_by, :scope, :tag_trigger)
+      params.require(:snippet).permit(:name, :contents, :created_by, :scope, :tag_trigger, :language_id, :description)
     end
 
 end

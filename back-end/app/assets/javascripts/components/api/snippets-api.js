@@ -13,3 +13,10 @@ export function getSnippets(apiKey) {
     return response;
   });
 }
+
+export function createSnippet(apiKey, snippet) {
+  return $.post('/api/snippets?api_key=' + apiKey, snippet).done((response) => {
+    store.dispatch(createSnippetSuccess(response));
+    return response;
+  });
+}

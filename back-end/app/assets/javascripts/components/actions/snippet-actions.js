@@ -7,3 +7,10 @@ export function getSnippetsSuccess(snippets) {
     snippets
   };
 }
+
+export function createSnippetSuccess(snippet) {
+  return {
+    type: types.CREATE_SNIPPET_SUCCESS,
+    snippet
+  };
+}

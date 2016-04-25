@@ -12,6 +12,8 @@ const snippetsReducer = function(state = initialState, action) {
     case types.GET_SNIPPETS_SUCCESS:
       // debugger;
       return [...action.snippets];
+    case types.CREATE_SNIPPET_SUCCESS:
+      return [...state, action.snippet];
 
     default:
       return state;
