@@ -1,0 +1,173 @@
+.new-gist-modal .modal-gist-description {
+    padding: 15px 14px 5px 14px;
+    border-bottom: 1px solid #ddd
+}
+
+.new-gist-modal .modal-gist-description .gist-description {
+    width: 100%;
+    resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.new-gist-modal .modal-header {
+    position: relative
+}
+
+.new-gist-modal .modal-header .modal-header-labels {
+    position: absolute;
+    top: 13px;
+    right: 14px
+}
+
+.new-gist-modal .modal-header .modal-header-labels .gist-label-container {
+    position: absolute;
+    width: 550px;
+    text-align: right;
+    top: 0;
+    right: 67px
+}
+
+.new-gist-modal .modal-body {
+    padding: 0
+}
+
+.new-gist-modal .modal-body .gist-file .gist-file-header {
+    padding-bottom: 7px
+}
+
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-name {
+    overflow: visible
+}
+
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-name input[type='text'] {
+    width: 150px;
+    margin: 0;
+    font-size: 12px
+}
+
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-name .gist-file-language-chooser {
+    width: 130px
+}
+
+.new-gist-modal .modal-body .gist-file .gist-file-header .gist-file-controls {
+    top: 14px
+}
+
+.new-gist-modal .modal-body .gist-file .gist-editor {
+    height: 270px;
+    border: 1px solid #ddd;
+    border-radius: 4px
+}
+
+.new-gist-modal .modal-body .add-another-file-container {
+    padding: 12px 14px 11px 14px
+}
+
+.new-gist-modal .modal-footer {
+    position: relative
+}
+
+.new-gist-modal .modal-footer .modal-footer-left {
+    position: absolute;
+    left: 14px;
+    top: 15px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #555;
+    text-transform: uppercase
+}
+
+.new-gist-modal .modal-footer .modal-footer-left .switch {
+    margin-right: 4px
+}
+
+.new-gist-modal .modal-footer .modal-footer-left>span {
+    position: absolute;
+    display: inline-block;
+    left: 91px;
+    top: 5px
+}
+
+.new-gist-modal .modal-footer .new-gist-spinner {
+    position: absolute;
+    top: 28px;
+    right: 174px
+}
+
+body.browserChrome .new-gist-modal .gist-file-name-box {
+    margin-top: -21px !important
+}
+
+.modal-header {
+    padding: 9px 15px;
+    border-bottom: 1px solid #ddd;
+    background: #f5f5f5;
+    -webkit-top-right-border-radius: 3px;
+    -webkit-top-left-border-radius: 3px;
+    -moz-top-right-border-radius: 3px;
+    -moz-top-left-border-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px
+}
+
+.modal-header .close {
+    margin-top: 2px
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 300;
+    color: #333;
+    line-height: 30px
+}
+
+.modal-body {
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 15px
+}
+
+.modal-form {
+    margin-bottom: 0
+}
+
+.modal-footer {
+    padding: 14px 15px 15px;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: inset 0 1px 0 #ffffff;
+    -moz-box-shadow: inset 0 1px 0 #ffffff;
+    box-shadow: inset 0 1px 0 #ffffff;
+    *zoom: 1
+}
+
+.modal-footer:before, .modal-footer:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.modal-footer:after {
+    clear: both
+}
+
+.modal-footer .btn+.btn {
+    margin-left: 5px;
+    margin-bottom: 0
+}
+
+.modal-footer .btn-group .btn+.btn {
+    margin-left: -1px
+}
+
+.modal-footer .btn-block+.btn-block {
+    margin-left: 0
+}

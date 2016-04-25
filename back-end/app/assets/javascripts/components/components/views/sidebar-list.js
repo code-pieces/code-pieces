@@ -1,11 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router';
+import NewGistModal from './new-gist-modal';
+
 
 export default function(props) {
+  let modalId = 'myModal';
   return (
     <ul className="sidebar">
         <li className="sidebar-new-gist tip-right">
-          <i className="fa fa-file-o"></i> New Gist
+          <button onClick={()=>{
+            console.log('open dialgo');
+            $('#myModal').modal('show');
+          }}>
+            <i className="fa fa-file-o"></i> New Gist
+          </button>
+          <NewGistModal id="myModal"/>
         </li>
         <li className="sidebar-my-gists sidebar-selected" data-url="library/my-gists">
           <i className="fa fa-list">

@@ -47,7 +47,12 @@ ul.sidebar>li.sidebar-selected:hover {
 }
 
 ul.sidebar>li.sidebar-new-gist {
-    margin: 20px 0
+    margin: 20px 0;
+
+    &>button {
+        background-color: #191919;
+        border-color: #191919;
+    }
 }
 
 ul.sidebar>li.sidebar-my-gists, ul.sidebar>li.sidebar-group-gists {

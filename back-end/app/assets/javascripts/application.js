@@ -20,4 +20,5 @@
 //= require ace/theme-github
 //= require guest_layout
 //= require react_ujs
+//= require bootstrap-sprockets
 //= require components

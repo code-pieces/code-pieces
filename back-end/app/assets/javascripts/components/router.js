@@ -14,6 +14,7 @@ import MainLayout from './components/layouts/main-layout';
 export default (
   <Router history={hashHistory}>
     <Route path="/" component={MainLayout}>
+
     </Route>
   </Router>
 );
