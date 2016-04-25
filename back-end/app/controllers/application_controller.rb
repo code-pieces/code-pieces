@@ -6,8 +6,20 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    User.find_by_id(session[:user_id])
   end
+
+  def signed_in?
+    !current_user.nil?
+  end
+
+  def require_login
+    unless signed_in?
+      flash[:error] = 'You must sign in to see this page.'
+      redirect_to auth_login_path
+    end
+  end
+
 
   def authenticate_user!
     unless current_user
@@ -23,5 +35,5 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  
+
 end

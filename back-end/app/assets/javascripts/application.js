@@ -16,4 +16,8 @@
 //= require materialize-sprockets
 //= require turbolinks
 //= require prism
-//= require_tree .
+//= require ace-rails-ap
+//= require ace/theme-github
+//= require guest_layout
+//= require react_ujs
+//= require components

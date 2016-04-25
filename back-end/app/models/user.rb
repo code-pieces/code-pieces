@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
         # cannot find old email. Your account is not existed
         # create new user & account
         existed_user = User.create(name: auth[:info][:name], email: email,
-          password: "123")
+          password: "123", avatar_url: auth[:info][:image])
       end
 
       existed_user.social_accounts.create(uid: auth[:uid], provider: auth[:provider])
