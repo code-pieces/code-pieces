@@ -10,7 +10,7 @@ class Api::SnippetsController < Api::APIApplicationController
       end
     end
 
-    render json: @snippets
+    render json: @snippets, root: false
   end
 
   # GET /snippets/1

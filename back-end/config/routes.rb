@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :developer do
     get 'dashboard', to: 'dashboard#index'
 
+
     resources :snippets
   end
 
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :snippets
+    resources :user
   end
 
   root to: "home#index"

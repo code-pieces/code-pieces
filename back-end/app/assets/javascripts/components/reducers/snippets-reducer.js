@@ -1,15 +1,21 @@
-// import * as types from '../actions/action-types';
+import * as types from '../actions/action-types';
 
 
-const initialState = {
-  snippets: [],
-  filter: 'SHOW_ALL'
-};
+const initialState = [];
 
 const snippetsReducer = function(state = initialState, action) {
+  console.log('----------- SNIPPETS REDUCER --------------');
+  console.log(action);
 
-  return state;
+  // debugger
+  switch(action.type) {
+    case types.GET_SNIPPETS_SUCCESS:
+      // debugger;
+      return [...action.snippets];
 
+    default:
+      return state;
+  }
 }
 
 export default snippetsReducer;
