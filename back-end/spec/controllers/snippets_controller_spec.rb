@@ -24,11 +24,11 @@ RSpec.describe SnippetsController, type: :controller do
   # Snippet. As you add validations to Snippet, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { name: "string", contents: "", created_by: 1, scope: "source.js", tag_trigger: "rcc" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { name: "", contents: "", created_by: 1, scope: "", tag_trigger: "" }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +103,15 @@ RSpec.describe SnippetsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { name: "string2", contents: "", created_by: 1, scope: "source.js", tag_trigger: "rcc" }
       }
 
       it "updates the requested snippet" do
         snippet = Snippet.create! valid_attributes
         put :update, {:id => snippet.to_param, :snippet => new_attributes}, valid_session
         snippet.reload
-        skip("Add assertions for updated state")
+        #skip("Add assertions for updated state")
+        expect(snippet.name).to eq("string2")
       end
 
       it "assigns the requested snippet as @snippet" do
