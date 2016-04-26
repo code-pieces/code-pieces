@@ -22,8 +22,17 @@ class Api::SnippetsController < Api::APIApplicationController
   def create
     @snippet = Snippet.new(snippet_params)
 
+    case Language.find_by_id(@snippet.language_id).name
+      when 'Javascript'
+        @snippet.scope = 'source.js'
+      when 'Ruby'
+        @snippet.scope = 'source.rb'
+    end
+
+    @current_user.snippets << @snippet
+
     if @snippet.save
-      render json: @snippet, status: :created, location: @snippet
+      render json: @snippet, status: :created, location: @snippet, root: false
     else
       render json: @snippet.errors, status: :unprocessable_entity
     end

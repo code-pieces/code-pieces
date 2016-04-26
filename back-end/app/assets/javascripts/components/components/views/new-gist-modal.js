@@ -24,8 +24,10 @@ class NewGistModal extends React.Component {
     this.state = {
       description: '',
       contents: '',
-      name: ''
-    }
+      name: '',
+      language_id: -1
+    };
+
   }
 
   componentWillMount() {
@@ -37,24 +39,33 @@ class NewGistModal extends React.Component {
   handleChangeSnippet(newValue) {
     // debugger
     // this.setState( {...this.state, contents: newValue} )
+    this.state.contents = newValue;
     console.log('change code', newValue);
   }
 
   handleChangeLanguage(newValue) {
     // debugger
     this.setState({...this.state, language_id: newValue.value});
+    // this.state.language_id = newValue.value;
     console.log('change language', newValue);
   }
 
-  handleChangeDescription(newValue) {
-    this.setState({...this.state, description: newValue.value});
+  handleChangeDescription(e) {
+    // debugger
+    this.setState({...this.state, description: e.target.value});
+    // this.state.description = e.target.value;
+    // console.log('new description', newValue);
   }
-  handleChangeName(newValue) {
-   this.setState({...this.state, name: newValue.value});
+
+  handleChangeName(e) {
+    // debugger
+    // this.state.name = e.target.value;
+   this.setState({name: e.target.value});
+   console.log(this.state);
   }
 
   handleClickSave() {
-    debugger
+    // debugger
     const { dispatch } = this.props;
 
     dispatch(snippetsApi.createSnippet(this.state));
@@ -87,15 +98,16 @@ class NewGistModal extends React.Component {
                 rows="3"
                 placeholder="Description"
                 value={this.state.description}
-                onClick={this.handleChangeDescription}></textarea>
+                onChange={this.handleChangeDescription}></textarea>
               </div>
               <div className="gist-files-container">
                 <div className="gist-file">
                   <div className="gist-file-header">
                     <div className="gist-file-name">
                       <input className="gist-file-name-box" placeholder="Name"
-                        value={this.state.name} style={{float:'left', marginRight: '8px'}}
-                        onClick={this.handleChangeName}/>
+                         style={{float:'left', marginRight: '8px'}}
+                         value={this.state.name}
+                        onChange={this.handleChangeName}/>
                       <Select name="select-language"
                         value={this.state.language_id}
                         options={options}
@@ -109,7 +121,7 @@ class NewGistModal extends React.Component {
                       theme="github"
                       onChange={this.handleChangeSnippet}
                       name={id + 'ace'}
-                      width={'100%'} value={this.state.contents}/>
+                      width={'100%'} />
                   </div>
                 </div>
               </div>

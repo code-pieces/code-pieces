@@ -3,7 +3,8 @@ import * as types from '../actions/action-types';
 
 const initialState = {
   snippets: [],
-  isLoading: false
+  isLoading: false,
+  isCreating: false
 };
 
 const snippetsReducer = function(state = initialState, action) {
@@ -19,7 +20,14 @@ const snippetsReducer = function(state = initialState, action) {
         snippets: action.snippets,
         isLoading: false
       };
+    case types.CREATE_SNIPPET_SENT:
+      // debugger
+      return {
+        ...state,
+        isCreating: true
+      };
     case types.CREATE_SNIPPET_SUCCESS:
+      // debugger
       return {
         ...state,
         snippets: [

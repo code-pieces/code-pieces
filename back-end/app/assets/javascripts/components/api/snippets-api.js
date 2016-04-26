@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import store from '../store';
-import { getSnippetsSent, getSnippetsSuccess, createSnippetSent } from '../actions/snippet-actions';
+import { getSnippetsSent, getSnippetsSuccess, createSnippetSent, createSnippetSuccess } from '../actions/snippet-actions';
 
 /**
  * Get Snippets
@@ -23,7 +23,9 @@ export function createSnippet(snippet) {
     const { apiKey } = getState().user;
     // debugger
     dispatch(createSnippetSent(snippet));
-    $.post('/api/snippets?api_key=' + apiKey, snippet).done((response) => {
+    $.post('/api/snippets?api_key=' + apiKey, {
+      snippet: snippet
+    }).done((response) => {
       // debugger
       dispatch(createSnippetSuccess(response));
     });

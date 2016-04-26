@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 export default ({
   name,
   description,
-  created_date,
+  created_at,
   user
 }) => {
   // debugger
@@ -19,7 +19,7 @@ export default ({
               {name}
             </div>
             <span className="gist-created-updated">
-              {created_date}
+              {created_at}
             </span>
           </div>
           <div className="gist-flags">
