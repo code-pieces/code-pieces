@@ -35,6 +35,10 @@ var editor = ace.edit("editor");
   editor.setTheme("ace/theme/github");
   editor.getSession().setMode("ace/mode/ruby");
 
+  if($('#editor-contents').val() != "") {
+    editor.setValue($('#editor-contents').val());
+  }
+
   editor.getSession().on('change', function(e) {
     // e.type, etc
 
