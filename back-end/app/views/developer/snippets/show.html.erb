@@ -20,11 +20,14 @@
             </i>
             Edit
           <% end %>
-          <button class="btn btn-secondary btn-sm tip-top delete-gist" data-hasqtip="true" oldtitle="Delete Gist">
-          <i class="fa fa-trash">
-          </i>
-          Delete
-          </button>
+
+          <%= link_to developer_snippet_path(@snippet.id), class: 'btn btn-secondary btn-sm tip-top delete-gist', method: :delete do%>
+            <i class="fa fa-trash">
+            </i>
+            Delete
+
+          <% end %>
+
         </div>
       </div>
       <div class="focus-view-header-controls-right">

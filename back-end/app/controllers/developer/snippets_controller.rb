@@ -37,6 +37,14 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
     end
   end
 
+  def destroy
+    @snippet = Snippet.find_by_id(params[:id]);
+
+    @snippet.delete
+
+    redirect_to developer_dashboard_path
+  end
+
   private
   def snippet_params
     params.require(:snippet).permit(:name, :description, :contents, :created_by, :language_id, :scope, :tag_trigger)
