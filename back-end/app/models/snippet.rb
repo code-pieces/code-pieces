@@ -6,7 +6,7 @@ class Snippet < ActiveRecord::Base
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.snippet {
         xml.name        name
-        xml.content     contents
+        xml.content     { xml.cdata contents }
         xml.tabTrigger  tag_trigger
         xml.scope       scope
         xml.description name
