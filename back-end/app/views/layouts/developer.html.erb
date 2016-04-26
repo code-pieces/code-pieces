@@ -151,7 +151,7 @@
                 <i class="icon-refresh">
                 </i>
               </div>
-              <div class="split-view-list-gists" style="height: 600px">
+              <div class="split-view-list-gists">
                 <% @snippets.all.each do |snippet| %>
                 <div class="split-gist ui-draggable <%= selected_snippet_class(snippet)%>" data-id='<%= snippet.id %>'>
                   <div class="split-gist-grapple">
@@ -192,7 +192,7 @@
               </script>
 
             </div>
-            <div class="split-view-content" style="height: 435px; width: 705px;">
+            <div class="split-view-content">
               <%= yield %>
             </div>
           </div>
