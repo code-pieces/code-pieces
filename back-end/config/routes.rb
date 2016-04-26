@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  scope module: 'admin' do
+    resources :snippets
+  end
+
   namespace :developer do
     get 'dashboard', to: 'dashboard#index'
 
@@ -6,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   ActiveAdmin.routes(self)
-  resources :snippets
+  # resources :snippets
 
   get 'auth/login', to: 'sessions#new'
   post 'auth/login', to: 'sessions#create'
@@ -21,6 +25,7 @@ Rails.application.routes.draw do
       post :reset_api_key
     end
   end
+
 
   namespace :api, defaults: { format: :json } do
     resources :snippets
