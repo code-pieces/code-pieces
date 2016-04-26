@@ -45,6 +45,10 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
     redirect_to developer_dashboard_path
   end
 
+  def email_snippet
+
+  end
+
   private
   def snippet_params
     params.require(:snippet).permit(:name, :description, :contents, :created_by, :language_id, :scope, :tag_trigger)
