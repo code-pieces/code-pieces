@@ -14,7 +14,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'active_model_serializers'
 gem 'dotenv-rails'
-gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'font-awesome-rails'
 gem 'material_icons'

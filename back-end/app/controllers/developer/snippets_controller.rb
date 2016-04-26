@@ -1,4 +1,6 @@
 class Developer::SnippetsController < Developer::DeveloperApplicationController
+  def index
+  end
 
   def new
     @snippet = Snippet.new
@@ -9,7 +11,7 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
     @snippet.user = current_user
     if @snippet.save
 
-      redirect_to developer_dashboard_path
+      redirect_to snippets_path
     else
       render :new
     end
@@ -31,7 +33,7 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
     @snippet = Snippet.find_by_id(params[:id])
 
     if @snippet.update(snippet_params)
-      redirect_to developer_dashboard_path
+      redirect_to snippets_path
     else
       render :edit
     end
@@ -42,7 +44,7 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
 
     @snippet.delete
 
-    redirect_to developer_dashboard_path
+    redirect_to snippets_path
   end
 
   def email_snippet
