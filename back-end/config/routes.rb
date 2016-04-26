@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  scope module: 'admin' do
+  scope module: 'developer' do
     resources :snippets
-  end
-
-  namespace :developer do
     get 'dashboard', to: 'dashboard#index'
-
-    resources :snippets
   end
 
-  ActiveAdmin.routes(self)
+  # namespace :developer do
+  #   get 'dashboard', to: 'dashboard#index'
+
+  #   resources :snippets
+  # end
+
+  # ActiveAdmin.routes(self)
   # resources :snippets
 
   get 'auth/login', to: 'sessions#new'

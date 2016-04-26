@@ -107,7 +107,7 @@
           </div>
           <ul class="sidebar">
             <li class="sidebar-new-gist tip-right">
-              <%= link_to new_developer_snippet_path do %>
+              <%= link_to new_snippet_path do %>
                 <i class="fa fa-file-o"></i> New Gist
               <% end %>
             </li>
@@ -193,7 +193,7 @@
                 </div>
                 <script type="text/javascript">
                   $('.split-view-list .split-gist').click(function(){
-                    document.location.href = '/developer/snippets/' + $(this).attr('data-id');
+                    document.location.href = '/snippets/' + $(this).attr('data-id');
                   });
                 </script>
                 <% end %>
