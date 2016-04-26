@@ -1,22 +1,32 @@
 import $ from 'jquery';
 import store from '../store';
-import { getSnippetsSuccess, deleteSnippetSuccess } from '../actions/snippet-actions';
+import { getSnippetsSent, getSnippetsSuccess, createSnippetSent } from '../actions/snippet-actions';
 
 /**
  * Get Snippets
  */
 
-export function getSnippets(apiKey) {
-  return $.get('/api/snippets?api_key=' + apiKey, (response) => {
+export function getSnippets() {
+  return (dispatch, getState) => {
     // debugger
-    store.dispatch(getSnippetsSuccess(response));
-    return response;
-  });
+    const { apiKey } = getState().user;
+
+    dispatch(getSnippetsSent())
+    $.get('/api/snippets?api_key=' + apiKey).done(response => {
+      dispatch(getSnippetsSuccess(response));
+    });
+  };
 }
 
-export function createSnippet(apiKey, snippet) {
-  return $.post('/api/snippets?api_key=' + apiKey, snippet).done((response) => {
-    store.dispatch(createSnippetSuccess(response));
-    return response;
-  });
+export function createSnippet(snippet) {
+  return (dispatch, getState) => {
+    const { apiKey } = getState().user;
+    // debugger
+    dispatch(createSnippetSent(snippet));
+    $.post('/api/snippets?api_key=' + apiKey, snippet).done((response) => {
+      // debugger
+      dispatch(createSnippetSuccess(response));
+    });
+  }
+
 }

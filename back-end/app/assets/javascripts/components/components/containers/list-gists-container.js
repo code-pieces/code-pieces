@@ -8,12 +8,11 @@ import * as snippetsApi from '../../api/snippets-api';
 class ListGistsContainer extends React.Component {
   constructor(props) {
     super(props);
-    // debugger
   }
 
   componentDidMount() {
-    // debugger
-    snippetsApi.getSnippets(this.props.apiKey);
+    const {dispatch} = this.props
+    dispatch(snippetsApi.getSnippets());
   }
 
   render() {
@@ -34,8 +33,7 @@ ListGistsContainer.contextTypes = {
 const mapStateToProps = (state) => {
   // debugger
   return {
-    apiKey: state.user.apiKey,
-    snippets: state.snippets
+    snippets: state.snippets.snippets
   };
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import NewGistModal from './new-gist-modal';
+
+import NewGistModalContainer from '../containers/new-gist-modal-container';
 
 
 export default function(props) {
@@ -62,7 +63,7 @@ export default function(props) {
         </li>
 
       </ul>
-      <NewGistModal id="myModal"/>
+      <NewGistModalContainer id="myModal"/>
       </div>
     );
 }

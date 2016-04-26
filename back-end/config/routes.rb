@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :snippets
     resources :user
+    resources :languages
   end
 
   root to: "home#index"

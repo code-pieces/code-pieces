@@ -5,31 +5,31 @@ import NewGistModal from '../views/new-gist-modal';
 
 import * as snippetsApi from '../../api/snippets-api';
 
-class NewGistModalContainer extends React.Component {
-  componentDidMount() {
-    // debugger
+// class NewGistModalContainer extends React.Component {
+//   componentDidMount() {
+//     // debugger
 
-  }
+//   }
 
-  render() {
-    return (
-      <NewGistModal  />
-    );
-  }
-}
+//   render() {
+//     return (
+//       <NewGistModal id="myModal"  />
+//     );
+//   }
+// }
 
-ListGistsContainer.defaultProps = {
-  snippets: []
-}
+// NewGistModalContainer.defaultProps = {
+//   snippets: []
+// }
 
-ListGistsContainer.contextTypes = {
-  store: React.PropTypes.object
-};
+// NewGistModalContainer.contextTypes = {
+//   store: React.PropTypes.object
+// };
 
 const mapStateToProps = (state) => {
   // debugger
   return {
-    apiKey: state.user.apiKey
+    languages: state.languages
   };
 };
 
@@ -37,4 +37,4 @@ const mapStateToProps = (state) => {
 
 // };
 
-export default connect(mapStateToProps)(NewGistModalContainer);
+export default connect(mapStateToProps)(NewGistModal);

@@ -5,8 +5,8 @@ const initialState = {
 };
 
 const userReducer = function(state = initialState, action) {
-  console.log('----------- USER REDUCER --------------');
-  console.log(action);
+  // console.log('----------- USER REDUCER --------------');
+  // console.log(action);
   switch(action.type) {
     case types.STORE_API_KEY:
       // debugger;
