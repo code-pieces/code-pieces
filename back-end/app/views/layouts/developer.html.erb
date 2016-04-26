@@ -129,31 +129,8 @@
             </li>
             <li class="sidebar-spacer">
             </li>
-            <li class="sidebar-labels-heading">
-              <i class="fa fa-tags">
-              </i>
-              Labels
-              <span class="new-label-container">
-                <i class="fa fa-plus tip-top new-label" data-hasqtip="true" oldtitle="New Label">
-                </i>
-              </span>
-            </li>
-            <li class="sidebar-labels-container">
-              <ul class="sidebar-labels ui-sortable">
-                <li class="sidebar-label ui-droppable" data-label-id="1460472900525">
-                  <span class="sidebar-label-grapple">
-                  </span>
-                  <i class="fa fa-caret-square-o-down">
-                  </i>
-                  <span class="sidebar-label-name">
-                    Important
-                  </span>
-                  <span class="sidebar-count">
-                    0
-                  </span>
-                </li>
-              </ul>
-            </li>
+
+
           </ul>
         </div>
         <div class="content-container">
@@ -210,15 +187,9 @@
                     </img>
                   </div>
                   <div class="gist-description">
-                    <%= snippet.description %>
+                  <pre class="language-javascript"><code><%= snippet.contents %></code></pre>
                   </div>
-                  <div class="gist-labels">
-                    <i class="fa fa-tags">
-                    </i>
-                    <span class="gist-no-labels">
-                      No Labels
-                    </span>
-                  </div>
+
                 </div>
                 <script type="text/javascript">
                   $('.split-view-list .split-gist').click(function(){
