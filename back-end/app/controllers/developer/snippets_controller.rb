@@ -1,4 +1,5 @@
 class Developer::SnippetsController < Developer::DeveloperApplicationController
+  before_action :set_snippet, only: [:show, :edit, :update, :destroy, :star]
   def index
   end
 
@@ -21,18 +22,14 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
 
   def show
     # binding.pry
-    @snippet = Snippet.find_by_id(params[:id])
     # selected_snippet(@snippet)
     session[:selected_snippet_id] = @snippet.id
   end
 
   def edit
-    @snippet = Snippet.find_by_id(params[:id])
   end
 
   def update
-    @snippet = Snippet.find_by_id(params[:id])
-
     if @snippet.update(snippet_params)
       redirect_to snippets_path
     else
@@ -41,8 +38,6 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   end
 
   def destroy
-    @snippet = Snippet.find_by_id(params[:id]);
-
     @snippet.delete
 
     redirect_to snippets_path
@@ -52,8 +47,16 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
 
   end
 
+  def star
+    @snippet.star_users << current_user
+  end
+
   private
   def snippet_params
     params.require(:snippet).permit(:name, :description, :contents, :created_by, :language_id, :scope, :tag_trigger)
+  end
+
+  def set_snippet
+    @snippet = Snippet.find_by(params[:id])
   end
 end

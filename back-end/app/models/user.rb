@@ -34,6 +34,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  def star_snippet(snippet)
+    star = stars.find_by_snippet_id(snippet.id)
+    # binding.pry
+    if star.nil?
+      Star.create(user_id: self.id, snippet_id: snippet.id)
+      true
+    else
+      Star.delete(star.id)
+      false
+    end
+  end
+
+  def star?(snippet_id)
+    !stars.find_by_snippet_id(snippet_id).nil?
+  end
   # callback handler for login with facebook
   # 1. user is existed with a linked facebook account
   # 2. user is existed but not facebook account

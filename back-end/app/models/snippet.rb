@@ -29,8 +29,6 @@ class Snippet < ActiveRecord::Base
     {id: id, name: name, contents: builder.to_xml}
   end
 
-
-
   def update_scope
     # binding.pry
     self.scope = "source.#{language.extension}"
