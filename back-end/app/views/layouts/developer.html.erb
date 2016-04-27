@@ -96,21 +96,36 @@
                 <i class="fa fa-file-o"></i> New Gist
               <% end %>
             </li>
-            <li class="sidebar-my-gists sidebar-selected" data-url="library/my-gists">
-              <i class="fa fa-list">
-              </i>
-              My Snippets
-              <span class="sidebar-count">
-                1
-              </span>
+            <li class="sidebar-my-gists <%= selected_sidebar_class('all') %>" data-url="library/my-gists">
+              <%= link_to snippets_path(mode: 'all') do %>
+                <i class="fa fa-list">
+                </i>
+                All Snippets
+                <span class="sidebar-count">
+                  <%= Snippet.count %>
+                </span>
+              <% end %>
             </li>
-            <li class="sidebar-starred-gists" data-url="library/starred">
-              <i class="fa fa-star">
-              </i>
-              Starred
-              <span class="sidebar-count">
-                0
-              </span>
+            <li class="sidebar-my-gists <%= selected_sidebar_class('owned') %>" data-url="library/my-gists">
+              <%= link_to snippets_path(mode: 'owned') do %>
+                <i class="fa fa-list">
+                </i>
+                My Snippets
+                <span class="sidebar-count">
+                  <%= current_user.snippets.count %>
+                </span>
+              <% end %>
+            </li>
+            <li class="sidebar-starred-gists <%= selected_sidebar_class('starred') %>" data-url="library/starred">
+              <%= link_to snippets_path(mode: 'starred') do %>
+                <i class="fa fa-star">
+                </i>
+                Starred
+                <span class="sidebar-count">
+                  <%= current_user.stars.count %>
+                </span>
+              <% end %>
+
             </li>
             <li class="sidebar-spacer">
             </li>

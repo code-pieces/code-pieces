@@ -1,10 +1,11 @@
 class Developer::SnippetsController < Developer::DeveloperApplicationController
 
   before_action :assign_user
+  before_action :assign_snippet, only: [:show, :edit, :update, :destroy, :star]
+  before_action :assign_snippets, only: [:index, :new, :show, :edit]
   helper_method :route_snippet_path
+
   def index
-    @snippets = Snippet.all
-    @snippets = @user.snippets if @user
   end
 
   def new
@@ -25,20 +26,18 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   end
 
   def show
-    # binding.pry
+    @snippets = Snippet.all
+    @snippets = @user.snippets if @user
     @snippet = Snippet.find(params[:id])
     @snippet = @user.snippets.find(params[:id]) if @user
-    # selected_snippet(@snippet)
+
     session[:selected_snippet_id] = @snippet.id
   end
 
   def edit
-    @snippet = Snippet.find_by_id(params[:id])
   end
 
   def update
-    @snippet = Snippet.find_by_id(params[:id])
-
     if @snippet.update(snippet_params)
       redirect_to snippets_path
     else
@@ -47,8 +46,6 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   end
 
   def destroy
-    @snippet = Snippet.find_by_id(params[:id]);
-
     @snippet.delete
 
     redirect_to snippets_path
@@ -58,9 +55,32 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
 
   end
 
+  def star
+    is_star = current_user.star_snippet(@snippet)
+
+    respond_to do |format|
+      format.html { redirect_to snippet_path(@snippet.id) }
+      format.json { render json: [ is_star: is_star ]}
+    end
+  end
+
+  def stars
+    @snippets = current_user.star_snippets
+    render :index
+  end
+
   private
   def snippet_params
     params.require(:snippet).permit(:name, :description, :contents, :created_by, :language_id, :scope, :tag_trigger)
+  end
+
+  def assign_snippets
+    @snippets = Snippet.all
+    @snippets = @user.snippets if @user
+  end
+
+  def assign_snippet
+    @snippet = Snippet.find(params[:id])
   end
 
   def assign_user

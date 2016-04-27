@@ -50,11 +50,11 @@
           </i>
           </button>
         </div>
-        <button class="btn btn-secondary btn-sm tip-top star-gist">
-        <i class="fa fa-star-o">
-        </i>
-        Star
-        </button>
+        <%= link_to star_snippet_path(@snippet.id), class: 'btn btn-secondary btn-sm tip-top star-gist', method: :post do%>
+          <i class="fa <%= star_icon(@snippet) %>">
+          </i>
+          Star
+        <% end %>
       </div>
     </div>
     <div class="focus-view-header-right">

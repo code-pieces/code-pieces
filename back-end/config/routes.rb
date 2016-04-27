@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
   scope module: 'developer' do
-    resources :snippets
+    resources :snippets do
+      member do
+        post :star
+      end
+
+      collection do
+        get :stars
+      end
+      # post 'star', to: 'snippets#star'
+    end
+
     get 'dashboard', to: 'dashboard#index'
     resources :users do
       resources :snippets
