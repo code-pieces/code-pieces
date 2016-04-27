@@ -1,0 +1,7 @@
+<div class="split-view-list" >
+  <% if @user %>
+    <%= render partial: 'creator', object: @user %>
+  <% end %>
+  <%= render partial: 'filter_bar' %>
+  <%= render partial: 'snippets' %>
+</div>

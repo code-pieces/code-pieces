@@ -1,3 +1,10 @@
+<div class="split-view-list" >
+  <% if @user %>
+    <%= render partial: 'creator', object: @user %>
+  <% end %>
+  <%= render partial: 'filter_bar' %>
+  <%= render partial: 'snippets' %>
+</div>
 <div class="focus-view-gist">
   <div class="focus-view-header">
     <div class="focus-view-header-name" style="width: 619px;">
@@ -5,9 +12,7 @@
     </div>
     <div class="focus-view-header-meta" style="width: 619px;">
       Created by
-      <a href="#" target="_blank">
-        <%= @snippet.user.name %>
-      </a>
+      <%= link_to @snippet.user.name, user_snippets_path(@snippet.user) %>
       on <%= distance_of_time_in_words(Time.now, @snippet.created_at) %>
       –
       Last updated <%= distance_of_time_in_words(Time.now, @snippet.updated_at) %>

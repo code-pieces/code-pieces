@@ -1,5 +1,10 @@
 class Developer::SnippetsController < Developer::DeveloperApplicationController
+
+  before_action :assign_user
+  helper_method :route_snippet_path
   def index
+    @snippets = Snippet.all
+    @snippets = @user.snippets if @user
   end
 
   def new
@@ -21,7 +26,8 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
 
   def show
     # binding.pry
-    @snippet = Snippet.find_by_id(params[:id])
+    @snippet = Snippet.find(params[:id])
+    @snippet = @user.snippets.find(params[:id]) if @user
     # selected_snippet(@snippet)
     session[:selected_snippet_id] = @snippet.id
   end
@@ -55,5 +61,18 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   private
   def snippet_params
     params.require(:snippet).permit(:name, :description, :contents, :created_by, :language_id, :scope, :tag_trigger)
+  end
+
+  def assign_user
+    @user = User.find(params[:user_id]) if params[:user_id]
+  end
+
+  def route_snippet_path(snippet)
+    if @user
+      user_snippet_path(@user, snippet)
+
+    else
+      snippet_path(snippet)
+    end
   end
 end

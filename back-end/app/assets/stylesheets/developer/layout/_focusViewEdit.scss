@@ -1,88 +1,93 @@
 .focus-view-edit-gist {
-    overflow: hidden
-}
+  flex: 1;
+  overflow: auto;
 
-.focus-view-edit-gist .focus-view-header {
+  .focus-view-header {
     position: relative;
     background: #f5f5f5;
     padding: 12px 14px 16px 14px;
-    border-bottom: 1px solid #ddd
+    border-bottom: 1px solid #ddd;
+
+    .focus-view-header-name {
+      margin-top: 5px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .focus-view-header-right {
+      position: absolute;
+      top: 14px;
+      right: 13px;
+
+      .edit-gist-spinner {
+        position: absolute;
+        top: 13px;
+        right: 133px;
+      }
+    }
+  }
+
+  .focus-view-content {
+    overflow-y: auto;
+
+    .focus-view-description {
+      padding: 15px 14px 5px 14px;
+      border-bottom: 1px solid #ddd;
+
+      > textarea {
+        width: 100%;
+        resize: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+    }
+
+    .gist-file {
+      .gist-file-header {
+        padding-bottom: 7px;
+
+        .gist-file-name {
+          overflow: visible;
+
+          input[type='text'] {
+            width: 150px;
+            margin: 0;
+            font-size: 12px;
+          }
+
+          .gist-file-language-chooser {
+            width: 130px;
+          }
+        }
+
+        .gist-file-controls {
+          top: 14px;
+        }
+      }
+
+      .gist-editor {
+        height: 250px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+    }
+
+    .add-another-file-container {
+      padding: 12px 14px 11px 14px;
+    }
+  }
 }
 
-.focus-view-edit-gist .focus-view-header .focus-view-header-name {
-    margin-top: 5px;
-    font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis
-}
-
-.focus-view-edit-gist .focus-view-header .focus-view-header-right {
+body {
+  &.browserFirefox .gist-file .chzn-container {
     position: absolute;
-    top: 14px;
-    right: 13px
-}
+    margin-left: 5px;
+  }
 
-.focus-view-edit-gist .focus-view-header .focus-view-header-right .edit-gist-spinner {
-    position: absolute;
-    top: 13px;
-    right: 133px
-}
-
-.focus-view-edit-gist .focus-view-content {
-    overflow-y: auto
-}
-
-.focus-view-edit-gist .focus-view-content .focus-view-description {
-    padding: 15px 14px 5px 14px;
-    border-bottom: 1px solid #ddd
-}
-
-.focus-view-edit-gist .focus-view-content .focus-view-description>textarea {
-    width: 100%;
-    resize: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box
-}
-
-.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header {
-    padding-bottom: 7px
-}
-
-.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-name {
-    overflow: visible
-}
-
-.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-name input[type='text'] {
-    width: 150px;
-    margin: 0;
-    font-size: 12px
-}
-
-.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-name .gist-file-language-chooser {
-    width: 130px
-}
-
-.focus-view-edit-gist .focus-view-content .gist-file .gist-file-header .gist-file-controls {
-    top: 14px
-}
-
-.focus-view-edit-gist .focus-view-content .gist-file .gist-editor {
-    height: 250px;
-    border: 1px solid #ddd;
-    border-radius: 4px
-}
-
-.focus-view-edit-gist .focus-view-content .add-another-file-container {
-    padding: 12px 14px 11px 14px
-}
-
-body.browserFirefox .gist-file .chzn-container {
-    position: absolute;
-    margin-left: 5px
-}
-
-body.browserChrome .focus-view-edit-gist .gist-file-name-box {
-    margin-top: -21px !important
+  &.browserChrome .focus-view-edit-gist .gist-file-name-box {
+    margin-top: -21px !important;
+  }
 }

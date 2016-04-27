@@ -1,3 +1,7 @@
-<div class='focus-view-edit-gist'>
-<%= render 'form' %>
-  </div>
+<div class="split-view-list" >
+  <%= render partial: 'filter_bar' %>
+  <%= render partial: 'snippets' %>
+</div>
+<div class="focus-view-edit-gist">
+  <%= render 'form' %>
+</div>

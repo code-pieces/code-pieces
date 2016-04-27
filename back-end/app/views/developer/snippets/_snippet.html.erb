@@ -1,0 +1,22 @@
+<a href="<%= route_snippet_path(snippet) %>" class="split-gist ui-draggable <%= selected_snippet_class(snippet)%>" data-id='<%= snippet.id %>'>
+  <div class="split-gist-grapple">
+  </div>
+  <div class="split-gist-header">
+    <%= image_tag snippet.user.avatar_url %>
+
+    <div class="gist-meta">
+      <div class="gist-name">
+        <%= snippet.name %>
+      </div>
+      <span class="gist-created-updated">
+        <%= distance_of_time_in_words(Time.now, snippet.updated_at ) %>
+      </span>
+    </div>
+    <div class="gist-flags">
+    </div>
+    </img>
+  </div>
+  <div class="gist-description">
+    <pre class="language-javascript"><code><%= snippet.contents %></code></pre>
+  </div>
+</a>

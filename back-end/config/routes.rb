@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   scope module: 'developer' do
     resources :snippets
     get 'dashboard', to: 'dashboard#index'
+    resources :users do
+      resources :snippets
+    end
   end
 
   # namespace :developer do
