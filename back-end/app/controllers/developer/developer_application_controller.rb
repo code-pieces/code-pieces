@@ -4,7 +4,7 @@ class Developer::DeveloperApplicationController < ApplicationController
   # helper_method :selected_snippet
 
   def current_user_snippets
-    @snippets = Snippet.all
+    @snippets = Snippet.all.updated_order
   end
 
   # def selected_snippet(snippet)

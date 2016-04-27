@@ -8,9 +8,9 @@
       <a href="#" target="_blank">
         <%= @snippet.user.name %>
       </a>
-      on <%= @snippet.created_at %>
+      on <%= distance_of_time_in_words(Time.now, @snippet.created_at) %>
       –
-      Last updated <%= @snippet.updated_at %>
+      Last updated <%= distance_of_time_in_words(Time.now, @snippet.updated_at) %>
     </div>
     <div class="focus-view-header-controls">
       <div class="focus-view-header-controls-left">

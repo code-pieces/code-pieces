@@ -9,6 +9,7 @@ class Snippet < ActiveRecord::Base
   validates :language_id, presence: true
   validates :scope, presence: true
 
+  scope :updated_order, -> () { order(:updated_at).reverse_order }
   before_validation :update_scope
 
   def as_sublime_snippet
