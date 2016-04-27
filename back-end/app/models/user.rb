@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   has_many :social_accounts
   has_many :snippets, foreign_key: :created_by
 
+  has_many :stars
+  has_many :star_snippets, through: :stars, source: :snippet
+
   has_secure_password
 
 

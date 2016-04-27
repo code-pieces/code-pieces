@@ -2,6 +2,9 @@ class Snippet < ActiveRecord::Base
   belongs_to :user, foreign_key: :created_by
   belongs_to :language
 
+  has_many :stars
+  has_many :star_users, through: :stars, source: :user
+
   validates :name, presence: true
   validates :tag_trigger, presence: true
   validates :contents, presence: true
