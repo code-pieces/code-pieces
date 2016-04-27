@@ -1,6 +1,8 @@
 class Developer::SnippetsController < Developer::DeveloperApplicationController
   before_action :set_snippet, only: [:show, :edit, :update, :destroy, :star]
+
   def index
+
   end
 
   def new
@@ -51,9 +53,14 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
     is_star = current_user.star_snippet(@snippet)
 
     respond_to do |format|
-      format.html { render :show }
+      format.html { redirect_to snippet_path(@snippet.id) }
       format.json { render json: [ is_star: is_star ]}
     end
+  end
+
+  def stars
+    @snippets = current_user.star_snippets
+    render :index
   end
 
   private
