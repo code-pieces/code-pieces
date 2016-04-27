@@ -48,7 +48,12 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   end
 
   def star
-    @snippet.star_users << current_user
+    is_star = current_user.star_snippet(@snippet)
+
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: [ is_star: is_star ]}
+    end
   end
 
   private
@@ -57,6 +62,6 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   end
 
   def set_snippet
-    @snippet = Snippet.find_by(params[:id])
+    @snippet = Snippet.find(params[:id])
   end
 end
