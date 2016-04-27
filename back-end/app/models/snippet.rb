@@ -15,4 +15,12 @@ class Snippet < ActiveRecord::Base
 
     {id: id, name: name, contents: builder.to_xml}
   end
+
+  before_validation :update_scope
+
+  def update_scope
+    # binding.pry
+    self.scope = "source.#{language.extension}"
+    true
+  end
 end

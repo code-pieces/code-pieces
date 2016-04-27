@@ -3,8 +3,8 @@ Snippet.delete_all
 Language.delete_all
 User.delete_all
 
-Language.create(name: 'Ruby')
-Language.create(name: 'Javascript')
+Language.create(name: 'Ruby', extension: 'rb')
+Language.create(name: 'Javascript', extension: 'js')
 
 User.create!([
   {name: "Quangbuu Le", api_key: "EzvYd4BRW1h0apRrrNrhEwtt", is_admin: false, avatar_url: 'https://avatars1.githubusercontent.com/u/5992964?v=3&s=400', email: "quangbuule@gmail.com", password_digest: "$2a$10$wCoZdRu3/U1t8jV5QOIlHuN8eEbrHdFABzb4FLo9dUAsH5l6bfroK"}
