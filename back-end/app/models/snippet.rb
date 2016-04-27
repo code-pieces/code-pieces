@@ -2,6 +2,15 @@ class Snippet < ActiveRecord::Base
   belongs_to :user, foreign_key: :created_by
   belongs_to :language
 
+  validates :name, presence: true
+  validates :tag_trigger, presence: true
+  validates :contents, presence: true
+  validates :created_by, presence: true
+  validates :language_id, presence: true
+  validates :scope, presence: true
+
+  before_validation :update_scope
+
   def as_sublime_snippet
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.snippet {
@@ -16,7 +25,7 @@ class Snippet < ActiveRecord::Base
     {id: id, name: name, contents: builder.to_xml}
   end
 
-  before_validation :update_scope
+
 
   def update_scope
     # binding.pry
