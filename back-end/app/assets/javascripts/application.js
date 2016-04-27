@@ -18,4 +18,5 @@
 //= require prism
 //= require ace-rails-ap
 //= require ace/theme-github
+//= require bootstrap-tagsinput
 //= require_tree .

@@ -18,6 +18,7 @@
         <div class="gist-file-name">
           <%= f.text_field :name, class: 'gist-file-name-box normal-text', placeholder: 'Name of your snippet' %>
           <%= f.select :language_id, options_from_collection_for_select(Language.all, :id, :name), class: 'gist-file-language-chooser chzn-done form-control normal-text' %>
+          Triggers <input id="triggerTags" type="text" data-role="tagsinput"/>
         </div>
       </div>
       <div class="gist-editor-container">
@@ -31,6 +32,10 @@
 <% end %>
 
 <script type="text/javascript">
+$("#triggerTags").tagsinput({
+  maxChars: 1,
+  cancelConfirmKeysOnEmpty: false
+});
 var editor = ace.edit("editor");
   editor.setTheme("ace/theme/github");
   editor.getSession().setMode("ace/mode/ruby");

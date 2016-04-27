@@ -9,6 +9,7 @@ class Developer::SnippetsController < Developer::DeveloperApplicationController
   def create
     @snippet = Snippet.new(snippet_params)
     @snippet.user = current_user
+
     if @snippet.save
 
       redirect_to snippets_path
